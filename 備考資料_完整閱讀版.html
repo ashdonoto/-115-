@@ -1,0 +1,1174 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>人工智慧導論｜完整備考資料</title><style>
+:root{color-scheme:light;--bg:#f3f5f8;--paper:#fff;--text:#202a38;--muted:#647084;--line:#dce3eb;--accent:#1d5f77;--code:#edf3f7;--thead:#eaf1f5;--mark:#ffe08a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;font-size:16px;line-height:1.9}body.dark{color-scheme:dark;--bg:#111821;--paper:#19232f;--text:#e1e8ef;--muted:#acb9c8;--line:#344354;--accent:#8bd2e3;--code:#233140;--thead:#26394a;--mark:#665219}a{color:var(--accent);text-underline-offset:3px}aside{position:fixed;width:265px;top:0;bottom:0;padding:25px 20px;border-right:1px solid var(--line);overflow:auto;background:var(--paper)}.brand{font-weight:800;font-size:23px;line-height:1.4}.sub{font-size:13px;color:var(--muted);margin:12px 0 24px}button{font:inherit;cursor:pointer;border:1px solid var(--line);border-radius:7px;padding:6px 12px;background:var(--paper);color:var(--text)}button:hover,button.active{background:var(--code);color:var(--accent);border-color:var(--accent)}aside button{display:block;width:100%;text-align:left;margin-bottom:10px;font-size:14px;padding:10px}.toolbar{margin-left:265px;padding:12px 25px;position:sticky;top:0;background:var(--paper);border-bottom:1px solid var(--line);display:flex;gap:10px;align-items:center;flex-wrap:wrap;z-index:5}.toolbar input{flex:1;min-width:190px;font:inherit;padding:7px 12px;background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:7px}.toolbar button{font-size:13px}#status{color:var(--muted);font-size:12px}main{margin-left:265px;padding:30px clamp(18px,4vw,70px) 90px;max-width:1480px}.chapter{background:var(--paper);padding:35px clamp(20px,4vw,55px);border:1px solid var(--line);border-radius:12px;margin-bottom:35px;overflow-wrap:anywhere}h1{font-size:30px;line-height:1.5;margin:0 0 22px;letter-spacing:.02em}h2{font-size:24px;margin:52px 0 20px;border-bottom:2px solid var(--line);padding-bottom:10px;line-height:1.5}h3{font-size:19px;margin-top:32px;line-height:1.6}p{margin:15px 0}strong{color:var(--accent)}pre{background:var(--code);border:1px solid var(--line);border-left:4px solid var(--accent);padding:18px;overflow:auto;line-height:1.9;font-size:14px;white-space:pre}code{font-family:"SFMono-Regular",Consolas,"PingFang TC",monospace}p code,li code{background:var(--code);padding:2px 5px;border-radius:3px}.tablewrap{overflow-x:auto;margin:22px 0}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.8}th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}th{background:var(--thead);font-weight:700}li{margin:8px 0}summary{cursor:pointer;font-weight:650;color:var(--accent)}.chaptertoc{padding:14px 20px;background:var(--code);border-radius:8px;margin:20px 0 30px}.chaptertoc ul{font-size:14px;columns:2}.solution>summary{margin-bottom:28px;padding:12px 16px;border:1px dashed var(--accent);border-radius:6px}mark{background:var(--mark);color:inherit;border-radius:2px}h1,h2,h3{scroll-margin-top:95px}.note{font-size:12px;color:var(--muted)}[hidden]{display:none!important}input[type=checkbox]{width:17px;height:17px;accent-color:var(--accent)}.toplink{position:fixed;right:18px;bottom:18px;background:var(--paper);border:1px solid var(--line);border-radius:25px;padding:5px 14px;text-decoration:none;font-size:13px}
+@media(max-width:1000px){aside{position:relative;width:auto;border-right:0;border-bottom:1px solid var(--line);padding:20px}aside nav{display:flex;overflow:auto;gap:8px}aside button{width:auto;white-space:nowrap;margin:0}.sub{margin:8px 0 15px}.toolbar,main{margin-left:0}.toolbar{padding:10px 18px}main{padding:20px 12px}.chapter{padding:25px 20px}h1{font-size:26px}.chaptertoc ul{columns:1}}
+@media print{body{background:#fff;color:#000;font-size:10pt;line-height:1.65}aside,.toolbar,.toplink,.chaptertoc,.solution>summary{display:none!important}main{margin:0;max-width:none;padding:0}.chapter,.chapter[hidden]{display:block!important;border:0;border-radius:0;margin:0;padding:0;break-before:page}.chapter:first-child{break-before:auto}h1{font-size:20pt}h2{font-size:15pt;margin-top:25px}h3{font-size:12pt}h1,h2,h3{break-after:avoid}pre{white-space:pre-wrap;font-size:9pt;border:1px solid #aaa;background:#f7f7f7;break-inside:avoid}.tablewrap{overflow:visible}table{font-size:8.5pt}tr{break-inside:avoid}thead{display:table-header-group}th,td{padding:5px 7px;border-color:#aaa}a{color:#000}mark{background:transparent}strong{color:#000}@page{size:A4;margin:18mm 16mm}}
+</style></head><body id="top"><aside><div class="brand">人工智慧導論<br>完整備考資料</div><p class="sub">六份講義 × 2025期中考<br>觀念・推導・詳解・練習<br>整理日期 2026.10.18</p><nav><button data-chapter="all">全部內容</button><button class="chapterbtn" data-chapter="c0">00 閱讀指南與讀書計畫</button><button class="chapterbtn" data-chapter="c1">01 完整觀念教材</button><button class="chapterbtn" data-chapter="c2">02 考古題逐題詳解</button><button class="chapterbtn" data-chapter="c3">03 公式速查與易錯觀念</button><button class="chapterbtn" data-chapter="c4">04 模擬試題</button><button class="chapterbtn" data-chapter="c5">05 模擬試題詳解</button><button class="chapterbtn" data-chapter="c6">06 講義頁碼索引與勘誤</button></nav><p class="note">本機離線文件，搜尋不會傳送資料。<br>完整閱讀版與可編輯原稿內容一致。<br>詳解為推導參考，非教師官方答案。</p></aside><div class="toolbar"><input id="search" type="search" aria-label="搜尋全文" placeholder="搜尋全文，例如：margin、條件獨立、PCA"><span id="status" aria-live="polite"></span><button id="solutions">隱藏詳解</button><button id="theme">切換明暗</button><button id="print">列印／存 PDF</button></div><main><section id="c0" class="chapter" data-name="閱讀指南與讀書計畫"><h1 id="c0-h1">人工智慧導論｜備考資料閱讀指南</h1>
+<details class="chaptertoc"><summary>本篇目錄</summary><ul><li><a href="#c0-h2">從哪裡開始</a></li><li><a href="#c0-h3">考古題透露的能力要求</a></li><li><a href="#c0-h4">七天讀書計畫</a></li><li><a href="#c0-h5">只剩一天時</a></li><li><a href="#c0-h6">自我檢核</a></li></ul></details>
+<p>整理日期：2026-10-18。依據本資料夾六份上課講義（共 548 頁）與一份 Fall 2025 期中考（4 頁）整理。使用繁體中文解說，保留考卷英文術語。</p>
+<h2 id="c0-h2">從哪裡開始</h2>
+<p><strong>建議先用瀏覽器開啟「備考資料_完整閱讀版.html」</strong>：有目錄、全文搜尋、章節切換與答案顯示控制，無須網路，也可用瀏覽器列印／另存 PDF。另有「備考資料_完整列印版.pdf」可直接閱讀與列印；各篇 Markdown 是可編輯的原稿。PDF將寬表格改排為逐列文字，方便紙上閱讀。</p>
+<div class="tablewrap"><table><thead><tr><th>檔案</th><th>用途</th></tr></thead><tbody>
+<tr><td>01_完整觀念教材.md</td><td>從基本定義到計算與推導，按學習順序閱讀</td></tr>
+<tr><td>02_考古題逐題詳解.md</td><td>2025 考卷每一小題的步驟、答案、易錯點與歧義</td></tr>
+<tr><td>03_公式速查與易錯觀念.md</td><td>考前複習、作答模板、中英術語對照</td></tr>
+<tr><td>04_模擬試題.md</td><td>自編 100 分模擬考與額外觀念快問；先作答再對答案</td></tr>
+<tr><td>05_模擬試題詳解.md</td><td>對應模擬考的過程、配分與訂正方向</td></tr>
+<tr><td>06_講義頁碼索引與勘誤.md</td><td>回查原始 PDF、掌握涵蓋範圍與資料限制</td></tr>
+<tr><td>來源文字/</td><td>可搜尋的 PDF 文字抽取；圖片公式仍須看原 PDF</td></tr>
+</tbody></table></div>
+<p>這份資料採「觀念 → 演算法 → 計算 → 反例 → 練習」編排。完整詳解是依題目自行推導的參考解答，<strong>不是教師公布的標準答案</strong>。自編題目與延伸說明會標示，避免誤認為歷屆原題。</p>
+<h2 id="c0-h3">考古題透露的能力要求</h2>
+<p>只有一份歷屆考卷，以下是該卷的配分，不能據此推定今年出題機率。</p>
+<div class="tablewrap"><table><thead><tr><th>原卷題目</th><th>配分</th><th>對應能力</th></tr></thead><tbody>
+<tr><td>Q1 Decision Tree</td><td>16</td><td>熵、資訊增益、畫樹、過度擬合</td></tr>
+<tr><td>Q2 Naive Bayes</td><td>15</td><td>平滑分母、重複詞、log score、條件獨立</td></tr>
+<tr><td>Q3 Neural Network</td><td>20</td><td>連續性、參數數量、forward、單條邊的梯度</td></tr>
+<tr><td>Q4 SVM</td><td>20</td><td>可分性、幾何邊界、支援向量、kernel 展開</td></tr>
+<tr><td>Q5 Clustering</td><td>5</td><td>k-means 為何依賴初始化、如何改善</td></tr>
+<tr><td>Q6 複選觀念</td><td>24</td><td>樹、k-NN、NB、NN、正則化、評估、學習典範</td></tr>
+</tbody></table></div>
+<p>Q1–Q4 共 71 分，應優先練到「不看解答能完整寫出過程」。Q6 一共 32 個敘述，僅背選項很容易被換句話騙過。</p>
+<p>講義另外包含 <strong>DBSCAN、階層分群、PCA、集成、交叉驗證、ROC、最佳化器與 12 種學習問題</strong>，本教材均納入。課程表還列出 Lecture 6、7，但資料夾沒有這兩份講義；本資料不宣稱涵蓋它們，也不把它們判定為不考。實際範圍仍以課堂公告為準。</p>
+<h2 id="c0-h4">七天讀書計畫</h2>
+<p>每次讀完一節，關掉資料，用自己的話說明「它解決什麼、怎麼做、何時失敗」。每天留下 15 分鐘重做昨天錯的題。</p>
+<div class="tablewrap"><table><thead><tr><th>天數</th><th>學習與實作</th><th>當天過關標準</th></tr></thead><tbody>
+<tr><td>第 1 天</td><td>教材第 1–2 章：ML 基本概念、分群；手算 k-means 與 DBSCAN</td><td>能分辨 centroid / medoid / core / border / noise</td></tr>
+<tr><td>第 2 天</td><td>教材第 3–4 章：PCA、決策樹；獨立做考古 Q1</td><td>會算加權熵，知道資訊增益可為零及平手</td></tr>
+<tr><td>第 3 天</td><td>教材第 5–6 章：NB、k-NN、集成；做考古 Q2、Q5</td><td>NB 分母正確，能說明 bias / variance</td></tr>
+<tr><td>第 4 天</td><td>教材第 7–8 章：SVM、評估；做考古 Q4、Q6.6</td><td>不混淆半邊 margin 與完整帶寬，會算 P/R/F1</td></tr>
+<tr><td>第 5 天</td><td>教材第 9 章：NN；做考古 Q3，補算隱藏層梯度</td><td>能寫參數數量、forward、chain rule、更新方向</td></tr>
+<tr><td>第 6 天</td><td>教材第 10–11 章：訓練實務、學習典範；做考古 Q6 全部</td><td>每個錯誤選項都能給反例或修正句</td></tr>
+<tr><td>第 7 天</td><td>限時完成自編模擬考，再訂正、重做弱點</td><td>計算題過程完整，錯題能指出錯在定義／公式／代數</td></tr>
+</tbody></table></div>
+<h2 id="c0-h5">只剩一天時</h2>
+<ol>
+<li>先花 30 分鐘看公式速查，寫下不熟的符號。</li>
+<li>花 100 分鐘獨立做考古 Q1–Q4，再花 60 分鐘依詳解訂正。</li>
+<li>花 45 分鐘做 Q5–Q6，特別理解每個「always」「any」「zero」的條件。</li>
+<li>花 45 分鐘補分群、PCA、正則化與學習典範比較表。</li>
+<li>最後 40 分鐘重算曾經錯的數字，不再只讀解答。</li>
+</ol>
+<h2 id="c0-h6">自我檢核</h2>
+<ul>
+<li><input type="checkbox" aria-label="學習檢核"> 我能用資料的類別計數算熵，並對子節點依樣本數加權。</li>
+<li><input type="checkbox" aria-label="學習檢核"> 我能說明為何同一路徑的數值特徵可以重複測試。</li>
+<li><input type="checkbox" aria-label="學習檢核"> 我能分辨 Multinomial NB 和 Bernoulli NB 的分母與輸入表示。</li>
+<li><input type="checkbox" aria-label="學習檢核"> 我知道模型判對不等於給正確類別機率 1。</li>
+<li><input type="checkbox" aria-label="學習檢核"> 我能從一條直線寫出 w、b，再求各點的 signed margin。</li>
+<li><input type="checkbox" aria-label="學習檢核"> 我能展開二次 kernel，並寫出帶 √2 的一組正確映射。</li>
+<li><input type="checkbox" aria-label="學習檢核"> 我能從任一條 NN 邊，用「上游梯度 × 局部導數」求偏微分。</li>
+<li><input type="checkbox" aria-label="學習檢核"> 我能說明 backprop 算梯度、optimizer 更新參數的分工。</li>
+<li><input type="checkbox" aria-label="學習檢核"> 我能分別舉出 supervised、semi-supervised、self-supervised、active learning 的例子。</li>
+<li><input type="checkbox" aria-label="學習檢核"> 我能用 validation 選模型，保留 test 做最後評估。</li>
+</ul></section><section id="c1" class="chapter" data-name="完整觀念教材"><h1 id="c1-h1">人工智慧導論｜完整觀念教材</h1>
+<details class="chaptertoc"><summary>本篇目錄</summary><ul><li><a href="#c1-h2">1. AI、資料與機器學習的共同語言</a></li><li><a href="#c1-h8">2. 分群：k-means、k-medoids、階層式與 DBSCAN</a></li><li><a href="#c1-h16">3. 高維資料與 PCA</a></li><li><a href="#c1-h21">4. 決策樹：從熵到剪枝</a></li><li><a href="#c1-h28">5. Naive Bayes：機率、條件獨立與平滑</a></li><li><a href="#c1-h34">6. k-NN、泛化與集成方法</a></li><li><a href="#c1-h39">7. SVM：邊界、margin 與 kernel</a></li><li><a href="#c1-h46">8. 模型評估、交叉驗證與 ROC</a></li><li><a href="#c1-h51">9. 神經網路：參數、前向與反向傳播</a></li><li><a href="#c1-h59">10. 深度學習實務：最佳化、正則化、診斷</a></li><li><a href="#c1-h65">11. 十二種學習問題：從監督來源辨識</a></li><li><a href="#c1-h68">12. 把整門課串起來</a></li></ul></details>
+<p>本篇以提供的 Lecture 1–5 為主，包含 Lecture 3 的兩個部分。每章開頭標示來源；頁碼全部採 <strong>PDF 實際頁序（從 1 開始）</strong>。為教學補充的簡例與推導，均不代表原講義或歷屆原題。</p>
+<h2 id="c1-h2">1. AI、資料與機器學習的共同語言</h2>
+<p>來源：L1 p.7–17、p.35–45、p.47–77；L3-I p.7–10。</p>
+<h3 id="c1-h3">1.1 AI、ML、DL 是什麼關係</h3>
+<p>人工智慧（Artificial Intelligence, AI）是讓機器具備推理、知覺、學習與決策等能力的廣泛領域。機器學習（Machine Learning, ML）透過資料與經驗改善表現；深度學習（Deep Learning, DL）使用多層神經網路學習表徵。可記作 <strong>DL ⊂ ML ⊂ AI</strong>。AI 也可以用人工規則，不必然需要訓練。</p>
+<p>傳統程式設計由人提供規則，資料經規則得到結果；監督式 ML 從資料與目標輸出找規則。適合 ML 的情境是有可學的規律、有相關資料，但很難人工明列規則，例如語音辨識。若已有簡單且精確的公式，未必需要 ML。</p>
+<h3 id="c1-h4">1.2 把問題寫成數學</h3>
+<pre><code>x ∈ X：輸入，例如一封信的詞頻向量
+ y ∈ Y：目標，例如 Spam 或 Ham
+D = {(x₁,y₁), …, (xₙ,yₙ)}：訓練資料
+f：未知的理想規律；g：演算法從資料學得的假設
+目標：讓 g 在未來未見資料上接近 f</code></pre>
+<p>分類（classification）預測離散類別；迴歸（regression）預測連續數值。分群（clustering）沒有事先給定正確類別，要發現資料結構。分群編號本身沒有語意：把 cluster 0 與 1 對調，群的成員沒變，就仍是同一分群。</p>
+<p>訓練表現與泛化（generalization）不同。把所有訓練樣本背熟，可能仍無法預測新樣本。應先定義任務、輸入、輸出與衡量方式，再挑演算法。</p>
+<h3 id="c1-h5">1.3 資料型態</h3>
+<div class="tablewrap"><table><thead><tr><th>型態</th><th>特性</th><th>例子與陷阱</th></tr></thead><tbody>
+<tr><td>Nominal 名目</td><td>只有類別，無自然大小次序</td><td>郵遞區號、學號；數字外觀不代表距離有意義</td></tr>
+<tr><td>Ordinal 次序</td><td>可排序，間距未必相等</td><td>滿意度：低、中、高</td></tr>
+<tr><td>Interval 區間</td><td>差值有意義，零點非絕對零</td><td>攝氏溫度；20°C 不是 10°C 的兩倍熱</td></tr>
+<tr><td>Ratio 比率</td><td>有真零點，比例有意義</td><td>長度、重量</td></tr>
+<tr><td>Discrete 離散</td><td>有限或可數個值</td><td>詞出現次數、班級人數</td></tr>
+<tr><td>Continuous 連續</td><td>理論上可取區間中的實數</td><td>身高、時間</td></tr>
+</tbody></table></div>
+<p>一筆資料稱 sample / instance / data object；一個描述欄位稱 feature / attribute / dimension。標籤是要預測的答案，不能把未來才知道的答案偷偷放入輸入。</p>
+<h3 id="c1-h6">1.4 哲學與推論：有效不等於前提為真</h3>
+<p>L1 強調反覆問「為什麼」。論證 <strong>valid</strong> 代表若前提為真，結論必然成立；<strong>sound</strong> 還要求前提本身為真。例如「所有有標籤資料都適合某模型；這批資料有標籤；所以適合該模型」的推論形式可以有效，但第一個前提過強，因此不健全。考試回答模型選擇時，要說出資料與假設的關係，不能只說某方法很熱門。</p>
+<h3 id="c1-h7">1.5 訓練、驗證、測試</h3>
+<ul>
+<li>Training：估計模型參數，例如 NN 的權重。</li>
+<li>Validation / Dev：選超參數與模型，例如 k、樹深度、SVM 的 C、停止 epoch。</li>
+<li>Test：選擇完成後估計最終泛化能力。</li>
+</ul>
+<p><strong>資料洩漏（data leakage）</strong>：使用了預測時不可能知道的資訊，或讓評估資料影響訓練／選擇。例如先用全資料算標準化平均，再做交叉驗證；正確方法是在每一 fold 的訓練部分擬合前處理，再套到該 fold 的驗證部分。PCA、補值、特徵選擇也遵守同一原則。</p>
+<h2 id="c1-h8">2. 分群：k-means、k-medoids、階層式與 DBSCAN</h2>
+<p>來源：L2 p.3–88。考古 Q5 直接考 k-means；其他方法同樣是講義重要內容。</p>
+<h3 id="c1-h9">2.1 距離、中心、半徑與直徑</h3>
+<p>歐氏距離 d(x,z) = √Σⱼ(xⱼ−zⱼ)²。若某欄位以萬元、某欄位以公分記錄，量級大的欄位可能主宰距離。常用 z-score：x&#x27;ⱼ = (xⱼ−μⱼ)/sⱼ；μ、s 應從訓練資料估計，常數欄位需另行處理。</p>
+<p>Centroid 是平均點，不必是原資料；medoid 是群內的一筆真實資料，通常選使群內距離總和最小的點。</p>
+<p>講義 L2 p.13 的 radius 與 diameter 使用均方距離定義：</p>
+<pre><code>μ = (1/N) Σᵢ xᵢ
+R = √[(1/N) Σᵢ ‖xᵢ−μ‖²]
+D = √[(1/(N(N−1))) Σᵢ Σⱼ ‖xᵢ−xⱼ‖²]，N &gt; 1
+因此 D² = 2N/(N−1) × R²，並非一般的 D = 2R。</code></pre>
+<p>有的教材將 diameter 定義為最大兩點距離，與這裡不同；遇到題目先看定義。</p>
+<h3 id="c1-h10">2.2 k-means 的目標與步驟</h3>
+<pre><code>J = Σⱼ₌₁ᵏ Σₓ∈Cⱼ ‖x−μⱼ‖²  （SSE / inertia）
+1. 選 k 個初始中心。
+2. Assignment：每個點歸到最近中心。
+3. Update：每一群的中心改為該群所有點的平均。
+4. 重複 2–3，直到分群不變或改善很小。</code></pre>
+<p>固定中心時，指派到最近群會使 J 不增加；固定分群時，平均數使平方誤差最小。因此交替操作讓目標不增加，但 <strong>不保證找到全域最佳解</strong>，因為群指派與中心一起最佳化是非凸問題。初始化不同，可能到不同局部解。</p>
+<p>自編手算例：資料 {0,2,8,10}，k=2，初始中心 0、8。第一次指派為 {0,2}、{8,10}，中心更新成 1、9；再次指派不變，SSE = 1+1+1+1 = 4。</p>
+<p>為何 mean 是最佳中心？對群 C 的 Σ(xᵢ−μ)² 微分，得到 2Nμ−2Σxᵢ=0，因此 μ=平均數。多維情形逐座標相同。</p>
+<h3 id="c1-h11">2.3 初始化與限制</h3>
+<ul>
+<li>多次隨機重啟：各跑到收斂，保留 SSE 最小者。</li>
+<li>k-means++：第一點隨機選，後續以到最近已選中心的 <strong>距離平方 D(x)²</strong> 為抽樣權重，讓種子傾向分散。不是每次直接挑最遠點，也不保證全域最佳。</li>
+<li>指定 random seed 只讓結果可重現，本身不保證品質更好。</li>
+</ul>
+<p>k-means 需要預先指定 k，偏好由歐氏距離與平均中心描述的緊密群。遇到離群值、大小與密度差異大或同心圓，可能很差。平方距離會放大極端值對中心的影響；空群出現時通常需重設中心。</p>
+<p>每次指派約 O(nkd)，總共 t 輪約 O(tnkd)。講義 O(tkn) 將維度 d 當常數。k 增加時最小可達 SSE 不會增加，所以不能單純以「SSE 最低」選 k。</p>
+<h3 id="c1-h12">2.4 k-medoids 與 PAM</h3>
+<p>k-medoids 用真實資料點作代表，常以距離總和為成本。PAM：選 k 個 medoids → 指派最近點 → 嘗試 medoid 與非 medoid 對調 → 接受降低成本的交換 → 重複。相較平均中心，對極端離群值通常較穩健，也能搭配非歐氏距離；代價是交換搜尋昂貴。講義每輪約 O(k(n−k)²)。CLARA 使用抽樣改善規模問題，CLARANS 使用隨機化搜尋。</p>
+<h3 id="c1-h13">2.5 階層式分群</h3>
+<p>Agglomerative（凝聚式、AGNES）由每個點一群開始，反覆合併最近的兩群。Divisive（分裂式、DIANA）從全部一群開始向下拆。Dendrogram（樹狀圖）記錄合併層次，在特定高度切開可得到分群，不必在建立整棵樹前指定 k。</p>
+<div class="tablewrap"><table><thead><tr><th>Linkage</th><th>兩群距離</th><th>特徵</th></tr></thead><tbody>
+<tr><td>Single</td><td>min d(x,z)</td><td>容易 chaining，靠細鏈連成大群</td></tr>
+<tr><td>Complete</td><td>max d(x,z)</td><td>偏好緊密群，受極端點影響</td></tr>
+<tr><td>Average</td><td>所有跨群點對距離的平均</td><td>折衷，別誤算成中心距離</td></tr>
+<tr><td>Centroid</td><td>兩群平均中心的距離</td><td>與 average linkage 不同</td></tr>
+<tr><td>Medoid</td><td>兩群代表資料點的距離</td><td>代表點須屬於資料</td></tr>
+</tbody></table></div>
+<p>主要限制是距離矩陣通常需要 O(n²) 空間，常見基本方法時間也很高；貪婪合併通常不能撤銷。BIRCH 以 CF-tree 摘要子群；CURE 用多個分散代表點並向中心縮。</p>
+<h3 id="c1-h14">2.6 DBSCAN：先分點，再擴張群</h3>
+<pre><code>Nε(p) = {q ∈ D : d(p,q) ≤ ε}
+Core：|Nε(p)| ≥ MinPts
+Border：不是 core，但位在至少一個 core 的 ε 鄰域內
+Noise：既非 core，也非 border</code></pre>
+<p>此處採常見且與鄰域集合式一致的約定：<strong>包含 p 自己，且使用 ≥</strong>。若試題另有規定，按試題計數。講義 p.35 的文字「more than」與其他頁「at least」不一致，不能混用。</p>
+<p>演算法從未處理的核心點開始，沿密度可達關係擴張。邊界點可以加入群，但 <strong>不能只靠邊界點繼續把群串接出去</strong>。某點早期被暫標為 noise，後來若被核心點涵蓋，應改為 border；一開始非 core 不代表最後一定是 noise。</p>
+<p>自編例：一維 {0,0.1,0.2,0.4,1.2}，ε=0.21、MinPts=3，包含自己。0、0.1、0.2 都至少有三點，為 core；0.4 只有自己與 0.2，為 border；1.2 為 noise。前四點成一群。</p>
+<ul>
+<li>q 從 p <strong>直接密度可達</strong>：p 必須是核心點，q 在其鄰域。</li>
+<li>密度可達：可沿一串直接可達的點抵達，通常不對稱。</li>
+<li>密度相連：存在 o，使 p、q 都從 o 密度可達，為對稱關係。</li>
+</ul>
+<p>DBSCAN 不需先給 k、能找非球狀群且標出 noise；但 ε 與 MinPts 敏感，單組參數難同時處理差很大的密度。邊界點若接觸兩群，歸屬可能依走訪順序而異。不要把講義的「one scan」解讀成保證 O(n)：鄰域查詢成本仍取決於資料結構與維度。</p>
+<h3 id="c1-h15">2.7 分群品質與選 k</h3>
+<pre><code>a(i)：i 到同群其他點的平均距離
+b(i)：對每個其他群算平均距離，再取最小值
+s(i) = [b(i)−a(i)] / max(a(i),b(i))</code></pre>
+<p>Silhouette 大致介於 −1 與 1：接近 1 表示群內近、群外遠；接近 0 表示群邊界；負值表示平均而言更靠近別群。<strong>b(i) 不是最近一個點的距離，也不是到最近中心的距離</strong>。單點群常約定 s=0；全部只分一群時無法按一般定義比較另一群。</p>
+<p>有真實類別時：Homogeneity 要求每一群內的樣本來自同一真實類別；Completeness 要求同一真實類別的樣本集中在同一群。它們不要求預測群編號與真實標籤數字完全一致。Elbow 是額外常見補充：觀察 SSE 隨 k 增加的下降幅度，在邊際改善變小處取捨。</p>
+<h2 id="c1-h16">3. 高維資料與 PCA</h2>
+<p>來源：L2 p.98–123。此章不在提供的考古計算大題中，但屬講義範圍。</p>
+<h3 id="c1-h17">3.1 維度災難</h3>
+<p>高維空間中資料稀疏，取得相同覆蓋程度需要更多樣本；無關維度會稀釋有用訊號。在某些分布與距離條件下，最近與最遠距離的相對差異變小，因此距離的辨識能力下降。最近鄰索引也可能退化。不是所有高維資料都無法學習，低內在維度或合適表徵仍可有幫助。</p>
+<p>Feature selection 挑原本的欄位；PCA 是 feature extraction，把多個欄位線性組合成新軸。PCA 不看標籤，保留大變異不等於保留最有分類能力的方向。</p>
+<h3 id="c1-h18">3.2 PCA 的完整步驟</h3>
+<pre><code>給 n 筆 d 維資料：
+1. 平均 μ = (1/n)Σxᵢ，中心化 x̃ᵢ = xᵢ−μ。
+2. 視量尺決定是否再標準化；中心化與標準化是不同操作。
+3. S = (1/n)Σ x̃ᵢ x̃ᵢᵀ，計算共變異數矩陣。
+4. 解 S vⱼ = λⱼ vⱼ；λ₁ ≥ λ₂ ≥ … ≥ 0，vⱼ 為正交單位向量。
+5. 取前 k 個方向，W = [v₁ … vₖ]（d×k）。
+6. z = Wᵀ(x−μ)（k×1），重建 x̂ = μ+Wz。</code></pre>
+<p>有些講義把每個方向排成列，因此寫 z=Wx；只是 W 的定義不同，必須檢查矩陣維度。共變異數若用 1/(n−1)，特徵值會整體縮放，主方向與解釋變異比例不變。</p>
+<h3 id="c1-h19">3.3 為什麼是最大特徵值的方向</h3>
+<p>單位向量 v 上的投影為 z=vᵀx̃，變異數 Var(z)=vᵀSv。最大化 vᵀSv，限制 vᵀv=1，令 L=vᵀSv−λ(vᵀv−1)。一階條件 2Sv−2λv=0，所以 Sv=λv；目標值正好等於 λ，因此選最大特徵值對應方向。第二主成分需另加與第一方向正交的限制，依序選後續特徵向量。</p>
+<pre><code>第 j 成分 explained variance ratio = λⱼ / Σᵣλᵣ
+累積保留比例 = (λ₁+…+λₖ) / Σᵣλᵣ</code></pre>
+<p>自編例：S=[[3,1],[1,3]]。特徵值 4、2，方向 (1,1)/√2、(1,−1)/√2。保留第一成分得到 4/6≈66.7% 變異。中心化點 (2,0) 的 z=√2，重建 (1,1)。PCA 方向正負號可互換，表示的子空間相同；重複特徵值時，該子空間內的正交基也不唯一。</p>
+<h3 id="c1-h20">3.4 限制與判斷</h3>
+<p>PCA 是線性、無監督方法，易受特徵尺度與離群值影響，不能保證保留類別資訊。當各欄單位不同時，先標準化常有意義，但不是所有任務都必須標準化；應依哪些尺度有實際意義決定。若 λ₁…λ₆ 的比例為講義四捨五入的 0.45、0.18、0.13、0.12、0.07、0.04，前四項約 88%；總和 0.99 是近似造成，不要硬解讀成完整機率缺失。</p>
+<h2 id="c1-h21">4. 決策樹：從熵到剪枝</h2>
+<p>來源：L3-I p.12–47；考古 Q1、Q6.1。</p>
+<h3 id="c1-h22">4.1 決策樹怎麼學</h3>
+<p>內部節點測試特徵、分支對應結果、葉節點輸出類別；根到葉的路徑是一條 AND 規則，多條正類路徑以 OR 組合。ID3 使用資訊增益，從上而下貪婪選擇，不會保證整棵樹全域最小。</p>
+<p>停止條件包括節點已純、沒有剩餘有效特徵、樣本太少或達深度限制。混合標籤的葉節點常用多數決，平手需有既定規則。足夠深的樹可表示有限布林輸入上的任何布林函數；單一線性分類器不能表示 XOR。</p>
+<h3 id="c1-h23">4.2 Entropy 與 Information Gain</h3>
+<pre><code>H(S) = −Σ𝚌 p𝚌 log₂p𝚌，約定 0 log₂0 = 0
+H(S|A) = Σᵥ [|Sᵥ|/|S|] H(Sᵥ)
+IG(S,A) = H(S)−H(S|A)</code></pre>
+<p>二元類別各半時 H=1 bit，純節點 H=0。二元 H(1/4)=H(3/4)≈0.811278；H(1/3)≈0.918296；H(2/5)≈0.970951。資訊增益衡量知道 A 後對標籤不確定性平均減少多少。</p>
+<p>自編例：父節點 4 正 4 負，A 分為 (3正,1負) 與 (1正,3負)。父熵 1；子熵各 0.811278；加權熵 0.811278；IG=0.188722。<strong>若子群大小不同，要用不同權重，不能一律平均。</strong></p>
+<p>整體的加權條件熵不高於父熵，IG≥0，但 IG 可以等於 0；個別子節點的熵可能比父節點高。例如父節點 9正1負，切出一個1正1負的子節點，其熵從約0.469升到1。因此「每次切割熵都嚴格下降」不是普遍真命題。</p>
+<h3 id="c1-h24">4.3 Gain Ratio 與 Gini</h3>
+<div class="tablewrap"><table><thead><tr><th>準則</th><th>公式或選擇</th><th>注意</th></tr></thead><tbody>
+<tr><td>Information gain</td><td>選最大 IG</td><td>偏好多值特徵，例如每人唯一 ID</td></tr>
+<tr><td>Gain ratio</td><td>IG / SplitInfo</td><td>正規化分支資訊量；SplitInfo=0 時不可直接除</td></tr>
+<tr><td>Gini</td><td>G=1−Σp𝚌²</td><td>常用於 CART，二元分類最大 0.5</td></tr>
+</tbody></table></div>
+<p>SplitInfo(A)=−Σᵥqᵥlog₂qᵥ，qᵥ=|Sᵥ|/|S|。<strong>SplitInfo 用分支大小，H(S) 用類別比例</strong>，兩者不能替換。分割後 Gini 也依樣本數加權，選減少最多或加權 Gini 最小的切割。C4.5 以 gain ratio 為代表，CART 通常採二元切割。</p>
+<h3 id="c1-h25">4.4 連續特徵與重複測試</h3>
+<p>連續特徵可排序，考慮相鄰不同值的中點 t，測試 A≤t / A&gt;t，再比較增益。同一路徑可以先測 age≤60，再在左分支測 age≤30，這能區分年齡區間。</p>
+<p>若是基本 ID3 對離散屬性一次依完整取值分支，走到子節點後該屬性已固定，再測同一屬性沒有資訊。因此「重複屬性冗餘」須限定情境，並非所有決策樹通則。</p>
+<h3 id="c1-h26">4.5 過度擬合與剪枝</h3>
+<p>Overfitting：訓練誤差很低，但未見資料表現差。樹太深可能把噪聲、罕見樣本與離群點都切成規則。</p>
+<ul>
+<li>Pre-pruning：提早停止，例如限制最大深度、最小葉樣本數、最小增益，或檢定切割是否有顯著關聯。限制太強也可能欠擬合。</li>
+<li>Post-pruning：先長樹，再刪除沒有帶來泛化收益的子樹，常以驗證資料或複雜度懲罰挑選。</li>
+</ul>
+<p>卡方檢定（L3-I p.38–44）：虛無假設為特徵與標籤獨立，期望次數 Eᵣ𝚌=該列總數×該欄總數/總樣本數，χ²=Σ(O−E)²/E，自由度 (r−1)(c−1)。講義出席表 [[30,10],[10,20]] 的 χ²≈12.15（講義先四捨五入得到約12.13），df=1，大於 α=0.05 的臨界值3.84，可拒絕獨立假設。這表示有統計關聯，<strong>不等同證明出席造成及格</strong>。</p>
+<h3 id="c1-h27">4.6 手算作答模板</h3>
+<ol>
+<li>計父節點各類數量，先寫 H(parent)。</li>
+<li>逐一列候選特徵每一分支的 (正,負)。</li>
+<li>計每一子群熵，再以分支樣本比例加權。</li>
+<li>算 IG；若平手，明說平手並給選擇規則。</li>
+<li>畫樹時標示切割屬性、邊的值、各節點類別分布。</li>
+<li>若還要下一層，<strong>在該子群內重新計算</strong>，不能沿用全資料 IG。</li>
+</ol>
+<h2 id="c1-h28">5. Naive Bayes：機率、條件獨立與平滑</h2>
+<p>來源：L3-I p.49–59；考古 Q2、Q6.3。</p>
+<h3 id="c1-h29">5.1 Bayes 與 MAP</h3>
+<pre><code>P(y|x) = P(x|y)P(y)/P(x)
+ŷ = argmax_y P(y)P(x|y)
+Naive 假設：P(x₁,…,x_d|y) = ∏ⱼ P(xⱼ|y)
+log score(y) = log P(y) + Σⱼ log P(xⱼ|y)</code></pre>
+<p>Prior 是看到 x 前的類別機率；Likelihood 是在類別給定時觀察 x 的機率；Posterior 是看到 x 後對類別的機率。只比較類別時可省略所有類別共同的 evidence P(x)，但若要求真正 posterior，就要再正規化。</p>
+<p>Naive Bayes 是 <strong>generative</strong>：建模 P(x|y) 與 P(y)，進而得到 P(y|x)。Discriminative 方法如 logistic regression，直接建模 P(y|x) 或決策邊界。</p>
+<h3 id="c1-h30">5.2 三種輸入模型不能混用</h3>
+<div class="tablewrap"><table><thead><tr><th>模型</th><th>特徵表示</th><th>類別條件機率</th></tr></thead><tbody>
+<tr><td>Categorical NB</td><td>每個欄位有若干離散值</td><td>(該值在類別內計數+α)/(該類樣本數+α×該欄可能值數)</td></tr>
+<tr><td>Multinomial NB</td><td>詞頻 c_w；重複詞重複計入</td><td>(詞 token 計數+α)/(該類總 token 數+α|V|)</td></tr>
+<tr><td>Bernoulli NB</td><td>每詞有／無，二元</td><td>(有該詞的文件數+α)/(該類文件數+2α)</td></tr>
+</tbody></table></div>
+<p>Bernoulli NB 還會把「沒出現」的詞以 1−P(w|y) 計入；Multinomial NB 使用詞頻，沒出現的詞次數為0，因此其冪次為0。不應在 Multinomial NB 把分母直接當文件總數。</p>
+<p>Gaussian NB（L3-I p.55）適合連續特徵：對每個類別與特徵估 μ、σ²，以常態密度代入。密度值不是單點事件機率；連續分布在精確某個實數的機率是0。</p>
+<h3 id="c1-h31">5.3 Laplace smoothing</h3>
+<p>沒有平滑時，只要一個條件機率為0，整個乘積就變成0。平滑給每個可能值 α 個偽計數：α=1 稱 add-one / Laplace。分子加 α，分母要同時加 α 乘上可能值數，才能維持總和為1。</p>
+<p>自編 Multinomial 例：詞彙 {a,b,c}，某類計數 {4,1,0}，α=1；機率為 5/8、2/8、1/8。不是分母 6，也不是只平滑沒出現的 c。未知詞是否納入 &lt;UNK&gt; 需由建模約定決定，不能臨時只改某一類的詞彙大小。</p>
+<h3 id="c1-h32">5.4 文件分類與 log</h3>
+<p>對詞頻向量 c_w，score(y)=P(y)∏_wP(w|y)^{c_w}。例如文件 a a b，a 的機率需平方。使用 log 可把乘法轉加法，避免小數連乘下溢；log 的底數只要一致，類別排序不變。熵題指定 log₂，則不能隨意換底不補係數。</p>
+<p>若兩個 unnormalized scores 為 s₁、s₂，posterior 為 s₁/(s₁+s₂) 與 s₂/(s₁+s₂)。有共同的 multinomial 組合係數時，分類可略去；完整文件機率才需按事件定義保留。</p>
+<h3 id="c1-h33">5.5 條件獨立不是無條件獨立</h3>
+<p>NB 假設「給定 y 之後」特徵互相獨立。兩個詞整體常一起出現，不必然代表條件獨立失敗；須看每一類內仍是否有依賴。若高度相關詞在同類內仍相關，NB 可能重複計算同一證據而過度自信，影響 posterior 校準與決策；但不保證每次都分錯，分類排序仍可能正確。</p>
+<p>訓練正確率100%也不代表 P(y正確|x)=1，只要正確類別分數最高就能判對。</p>
+<h2 id="c1-h34">6. k-NN、泛化與集成方法</h2>
+<p>來源：L3-II p.4–6；L3-I p.61–82。</p>
+<h3 id="c1-h35">6.1 k-NN 是 lazy learning</h3>
+<p>k-NN 保存訓練樣本，預測時才計距離找鄰居。分類用多數決，迴歸常用平均；加權版本給近鄰更大權重，例如 1/(d+ε)。它不需要先訓練一個全域參數模型，但預測與儲存可能昂貴。</p>
+<p>若用訓練資料本身當查詢、包含自己且沒有重複矛盾點，k=1 的訓練誤差為0。這不是 leave-one-out 表現，也不代表 test 誤差為0。</p>
+<div class="tablewrap"><table><thead><tr><th>k 的變化</th><th>邊界與泛化傾向</th></tr></thead><tbody>
+<tr><td>k 小</td><td>邊界細碎；低 bias、高 variance，容易受噪聲影響</td></tr>
+<tr><td>k 大</td><td>邊界平滑；較高 bias、較低 variance，可能忽略小群</td></tr>
+</tbody></table></div>
+<p>以上是一般趨勢，不是對所有資料的嚴格定理。選 k 要用驗證集／CV。k-NN 自然可處理多類別，但偶數 k、相同距離或票數平手要指定規則；標準化對距離特徵很重要。</p>
+<h3 id="c1-h36">6.2 欠擬合、過度擬合與 bias / variance</h3>
+<p>Underfitting 是模型過簡或最佳化不足，training 與 validation 都差。Overfitting 是訓練好、驗證相對差。增加模型容量通常可降低可達訓練誤差，但也可能加大泛化風險。</p>
+<p>平方誤差的典型理論分解為 Bias² + Variance + 不可約噪聲（補充）：bias 是平均模型與真函數的差，variance 是訓練資料變動造成的模型變動。不是「訓練誤差=bias、測試誤差=variance」。</p>
+<h3 id="c1-h37">6.3 Bagging、Boosting、Random Forest</h3>
+<div class="tablewrap"><table><thead><tr><th>方法</th><th>怎麼產生多模型</th><th>如何合併</th><th>核心理解</th></tr></thead><tbody>
+<tr><td>Bagging</td><td>bootstrap 有放回抽樣，各自訓練</td><td>分類投票、迴歸平均</td><td>通常降低高變異模型的 variance</td></tr>
+<tr><td>Boosting</td><td>依序訓練，後續補前面的錯誤</td><td>加權組合</td><td>讓弱模型逐步組成強模型，可能追逐噪聲</td></tr>
+<tr><td>Random Forest</td><td>bagging 樹，加上每節點隨機特徵候選</td><td>投票／平均</td><td>降低樹與樹之間的相關性</td></tr>
+</tbody></table></div>
+<p>Bootstrap 每次通常抽 n 次，但因有放回，不代表每個樣本都出現。以標準 bootstrap 而言，特定樣本未被抽到的機率為 (1−1/n)^n，n 大時約 e⁻¹≈36.8%（補充）；可作 out-of-bag 評估。</p>
+<p>講義五個模型各正確率0.6的例子：若各模型對同一樣本的判斷獨立且正確率相同，多數決正確率為 Σᵣ₌₃⁵ C(5,r)0.6ʳ0.4⁵⁻ʳ=0.68256。<strong>僅知道平均正確率0.6不足以推出此結果</strong>；若五個模型錯在完全相同樣本，多數決仍只有0.6。集成需要多樣性。</p>
+<h3 id="c1-h38">6.4 多類別與不平衡</h3>
+<p>m 類的 One-vs-Rest 需要 m 個分類器；One-vs-One 需要 m(m−1)/2 個。OvR 常取最高分，OvO 常投票。k-NN、決策樹、softmax 本身可自然處理多類別。</p>
+<p>不平衡資料中，全猜多數類也可能 accuracy 很高。可考慮類別權重、oversampling、undersampling、調整決策閾值，並用 precision / recall / F1 等評估。重採樣應只在訓練資料內做，不能先對全部資料複製再切分，以免同一筆出現在 train 與 test。</p>
+<h2 id="c1-h39">7. SVM：邊界、margin 與 kernel</h2>
+<p>來源：L3-II p.8–48；考古 Q4。這章的「距離」與「表示尺度」一定要分清楚。</p>
+<h3 id="c1-h40">7.1 線性決策函數</h3>
+<pre><code>g(x)=wᵀx+b；ŷ=sign(g(x))，y∈{−1,+1}
+決策邊界：wᵀx+b=0
+w 是邊界的法向量；b 決定位移
+functional margin：γ̂ᵢ=yᵢ(wᵀxᵢ+b)
+signed geometric margin：γᵢ=γ̂ᵢ/‖w‖，w≠0
+普通點到平面距離：|wᵀx+b|/‖w‖</code></pre>
+<p>分對時 γᵢ&gt;0，分錯時 γᵢ&lt;0；落在邊界為0。資料集 margin=minᵢγᵢ。若全都分對，這等於最近點到邊界的距離。</p>
+<p>將 (w,b) 乘上 c&gt;0，邊界與分類不變，functional margins 乘 c，geometric margins 不變，因分子分母一起乘 c。只把 w 乘 c 而不改 b，通常會改變邊界。c&lt;0 邊界雖相同但正負預測翻轉。</p>
+<h3 id="c1-h41">7.2 Hard margin 與兩種 margin 定義</h3>
+<p>在線性可分時，把表示尺度規範為最近點滿足 yᵢ(wᵀxᵢ+b)=1：</p>
+<pre><code>min ½‖w‖²
+subject to yᵢ(wᵀxᵢ+b) ≥ 1，所有 i
+單側幾何 margin = 1/‖w‖
+兩條支撐平面 wᵀx+b=+1、−1 的完整帶寬 = 2/‖w‖</code></pre>
+<p>題目可能把 margin 用來指半邊距離，也可能指完整帶寬；必須照定義回答。考古 Q4 用 min geometric margin，採單側距離。</p>
+<p>支援向量是決定最佳邊界的訓練點。非退化的 hard-margin 解中通常位於 yᵢg(xᵢ)=1。嚴格 dual 定義是 αᵢ&gt;0；退化情況下某些恰在 margin 上的點可能 αᵢ=0。不要把任意分隔線最近的點都稱為「已求得最佳 SVM 的支援向量」。</p>
+<h3 id="c1-h42">7.3 Soft margin 與 C</h3>
+<p>不可分時 hard-margin 約束不可行，需引入鬆弛變數：</p>
+<pre><code>min ½‖w‖² + C Σᵢξᵢ
+subject to yᵢ(wᵀxᵢ+b) ≥ 1−ξᵢ，ξᵢ≥0
+等價懲罰形式：½‖w‖² + C Σᵢ max(0,1−yᵢg(xᵢ))</code></pre>
+<p>C 大代表更重視減少 margin violation，通常更貼合訓練資料；C 小容許較多違反，較重視小權重與較寬 margin。不是「C 越大，正則化越強」。</p>
+<p>在最小必要鬆弛量的理解下：ξ=0 表示在 margin 上或外側；0&lt;ξ&lt;1 表示分對但進入 margin；ξ=1 表示在決策邊界；ξ&gt;1 表示分錯。Soft SVM 最小化 hinge penalty 與權重的折衷，不是直接最小化 0–1 誤分類數。</p>
+<h3 id="c1-h43">7.4 Dual 與 kernel trick</h3>
+<pre><code>max_α Σᵢαᵢ − ½ΣᵢΣⱼ αᵢαⱼ yᵢyⱼ K(xᵢ,xⱼ)
+soft-margin constraints：0≤αᵢ≤C，Σᵢαᵢyᵢ=0
+g(x)=Σᵢ αᵢ yᵢ K(xᵢ,x)+b</code></pre>
+<p>Hard margin 的 dual 沒有 α≤C 上界。線性時 w=Σαᵢyᵢxᵢ。</p>
+<p>由 primal 推 dual 的骨架：寫 L=½wᵀw−Σαᵢ[yᵢ(wᵀxᵢ+b)−1]；對 w、b 設導數0，得到 w=Σαᵢyᵢxᵢ、Σαᵢyᵢ=0；代回得到 dual。KKT 的互補條件 αᵢ[yᵢg(xᵢ)−1]=0，使不在 margin 的點可有 α=0。</p>
+<p>若存在映射 φ，使 K(x,z)=φ(x)ᵀφ(z)，可用 kernel 值直接取代高維內積。訓練與預測不必明列每一個高維特徵；高維中線性的分隔面，在原空間可形成非線性邊界。Kernel 不是「任意相似度都可」，需符合有效內積 kernel 的性質。</p>
+<h3 id="c1-h44">7.5 二次 polynomial kernel 展開</h3>
+<pre><code>K(x,z)=(x₁z₁+x₂z₂+c₀)²
+c₀=0：x₁²z₁² + 2x₁x₂z₁z₂ + x₂²z₂²
+一組映射 φ(x)=(x₁², √2 x₁x₂, x₂²)
+
+c₀=1：再加 2x₁z₁ + 2x₂z₂ + 1
+一組映射 φ(x)=(x₁², √2 x₁x₂, x₂², √2 x₁, √2 x₂, 1)</code></pre>
+<p>只有二次交叉特徵 x₁x₂ 並不能完整代表整個二次 kernel，還包含平方項。√2 使特徵內積的係數恰好等於展開式。此處 c₀ 是 kernel 常數，與 soft-margin 的懲罰 C 是不同概念，雖然考古題用同一字母 C。</p>
+<p>RBF kernel 為 exp(−γ‖x−z‖²)，γ 控制相似度衰減；γ 很大時邊界可很局部，需與 C 一起調整（補充）。用更豐富的 kernel 不保證資料一定可分，尤其同一 x 若有矛盾標籤，確定性特徵映射仍不能消除矛盾。</p>
+<h3 id="c1-h45">7.6 Perceptron（考古公式表延伸）</h3>
+<pre><code>當 y(wᵀx+b) ≤ 0：
+w ← w+ηyx；b ← b+ηy</code></pre>
+<p>Perceptron 找能分對的邊界，不以最大 margin 為目標；線性可分時在適當條件下會收斂，不可分時可能持續更新。與 SVM 的最佳化目標不同。</p>
+<h2 id="c1-h46">8. 模型評估、交叉驗證與 ROC</h2>
+<p>來源：L3-II p.51–65；考古 Q6.6。</p>
+<h3 id="c1-h47">8.1 混淆矩陣先固定軸</h3>
+<div class="tablewrap"><table><thead><tr><th>實際＼預測</th><th>Positive</th><th>Negative</th></tr></thead><tbody>
+<tr><td>Positive</td><td>TP</td><td>FN</td></tr>
+<tr><td>Negative</td><td>FP</td><td>TN</td></tr>
+</tbody></table></div>
+<pre><code>Accuracy=(TP+TN)/(TP+FP+FN+TN)
+Precision=TP/(TP+FP)  → 宣告正的樣本，有多少是真的正
+Recall=TP/(TP+FN)     → 真正為正的樣本，有多少被找到
+Specificity=TN/(TN+FP)
+FPR=FP/(FP+TN)=1−Specificity
+F1=2PR/(P+R)=2TP/(2TP+FP+FN)</code></pre>
+<p>F1 不使用 TN，且是調和平均。通常介於 P 與 R 之間；若 P&gt;R&gt;0，則 R&lt;F1&lt;P。分母為0時要依題目或套件約定處理，不能直接當正常除法。</p>
+<p>自編例：TP=30、FP=10、FN=20、TN=40，P=0.75、R=0.6、F1=2/3、Acc=0.7。別把 precision 分母誤寫成 TP+FN。</p>
+<h3 id="c1-h48">8.2 不平衡、閾值與錯誤成本</h3>
+<p>1000 筆資料只有10筆正例，全猜負例 accuracy=99%，但 recall=0。若漏掉正例代價高，需關注 recall；若誤報代價高，需關注 precision，但兩者都應在任務背景下權衡。</p>
+<p>對分數分類器降低正類閾值，會讓預測正例集合擴大，因此 TPR 與 FPR 都不減少；precision 不保證單調提高或降低。閾值選擇需用驗證資料。</p>
+<h3 id="c1-h49">8.3 Holdout、k-fold、LOOCV</h3>
+<p>Holdout 是一次切分。k-fold CV 將資料分 k 份，每次 k−1 份訓練、1份驗證，平均 k 次結果；不是每次重用同一份驗證。Stratified CV 盡量保留類別比例。LOOCV 是 k=n，每次留一筆，計算成本較高。</p>
+<p>若樣本存在病人、使用者或時間相依，應按群組或時間切分，不能讓同一個體的近似資料跨集合。這是泛化評估補充，不代表課程額外演算法範圍。</p>
+<h3 id="c1-h50">8.4 ROC / AUC</h3>
+<p>ROC 的橫軸 FPR，縱軸 TPR=Recall，掃過閾值形成曲線。左上角較理想；隨機排序的基準對角線 AUC 約0.5，完美排序為1。AUC 衡量排序能力，不是某一閾值下的 accuracy。ROC 不直接呈現 precision；不平衡情況可另看 PR curve（補充）。</p>
+<h2 id="c1-h51">9. 神經網路：參數、前向與反向傳播</h2>
+<p>來源：L4 p.15–59、p.61–101；考古 Q3、Q6.4。</p>
+<h3 id="c1-h52">9.1 一個神經元與一層網路</h3>
+<pre><code>單元：z=Σⱼ wⱼxⱼ+b，a=f(z)
+一層：zˡ=Wˡaˡ⁻¹+bˡ，aˡ=fˡ(zˡ)，a⁰=x
+若前層有 m 個單元、此層 n 個：W 為 n×m，b 為 n×1</code></pre>
+<p>z 是 activation 前的線性輸入；a 是 activation 後的輸出，兩者不可混稱。Bias 平移決策面；input nodes 本身一般沒有待訓練參數。</p>
+<p>全連接 m→n 共有 mn 個連接權重與 n 個 bias，總計 <strong>(m+1)n</strong>。多層則加總每一層。ReLU、sigmoid、一般 softmax 本身沒有可訓練參數；不要多算。</p>
+<h3 id="c1-h53">9.2 Activation Functions</h3>
+<div class="tablewrap"><table><thead><tr><th>函數</th><th>值域</th><th>導數與特性</th></tr></thead><tbody>
+<tr><td>Sigmoid σ(z)=1/(1+e⁻ᶻ)</td><td>(0,1)</td><td>σ&#x27;(z)=σ(z)(1−σ(z))；兩端飽和、導數趨0</td></tr>
+<tr><td>tanh(z)</td><td>(−1,1)</td><td>1−tanh²(z)；零中心，仍會飽和</td></tr>
+<tr><td>ReLU=max(0,z)</td><td>[0,∞)</td><td>z&gt;0 導數1、z&lt;0 導數0；z=0不可微</td></tr>
+<tr><td>Leaky ReLU=max(αz,z)，0&lt;α&lt;1</td><td>實數</td><td>負側保留斜率 α，連續；0處通常不可微</td></tr>
+<tr><td>Linear f(z)=z</td><td>實數</td><td>導數1，常用迴歸輸出</td></tr>
+<tr><td>Softmax</td><td>每個分量(0,1)、總和1</td><td>互斥多類別機率；分量互相耦合</td></tr>
+</tbody></table></div>
+<p>若每層都只有線性／仿射轉換，多層仍可合併成單層仿射轉換，不能靠加深表達一般非線性。</p>
+<p>「連續」與「可微」不同：ReLU 在0連續但不可微，可採約定的次梯度進行訓練；step 函數在跳點不連續，且其他地方導數0，會使梯度學習困難。考古的 Leaky Step 是分段常數，與 Leaky ReLU 不同。</p>
+<p>Maxout（L4 p.23–24）取多個仿射值的最大值，學得分段線性函數；ELU 負側使用指數形式，使負側輸出較平滑。重點先掌握 sigmoid / tanh / ReLU，再看其他變體。</p>
+<h3 id="c1-h54">9.3 輸出與 loss 要配對</h3>
+<div class="tablewrap"><table><thead><tr><th>任務</th><th>常見輸出</th><th>Loss</th></tr></thead><tbody>
+<tr><td>數值迴歸</td><td>Linear</td><td>平方誤差／MSE</td></tr>
+<tr><td>二元分類</td><td>單一 sigmoid</td><td>Binary cross entropy</td></tr>
+<tr><td>互斥多類分類</td><td>K 維 softmax</td><td>Categorical cross entropy</td></tr>
+</tbody></table></div>
+<pre><code>平方誤差：L=½(y−t)² → ∂L/∂y=y−t
+BCE：L=−[t log p+(1−t)log(1−p)]
+Softmax：pₖ=exp(zₖ)/Σⱼexp(zⱼ)
+CE：L=−Σₖtₖ log pₖ；one-hot 時等於 −log p_true
+Softmax + CE：∂L/∂zₖ=pₖ−tₖ
+Sigmoid + BCE：∂L/∂z=p−t</code></pre>
+<p>MSE 若題目不用 ½，微分多出2；若對 n 筆取平均，梯度需除 n。比較答案前先確認 loss 定義。</p>
+<p>Softmax 可將所有 logits 同減 max(z) 避免 exp overflow，機率不變。多標籤問題的多個標籤可同時成立，一般用多個 sigmoid，不應直接套互斥 softmax（補充）。</p>
+<h3 id="c1-h55">9.4 Forward Pass 範例</h3>
+<p>自編小網路：x=(1,2)，hidden 兩個 sigmoid；第一個權重 (1,−1)、bias=0，第二個權重 (0.5,0.5)、bias=−0.5；linear output 權重 (2,1)、bias=0。</p>
+<pre><code>z₁=1×1−1×2=−1；a₁=σ(−1)≈0.268941
+z₂=0.5×1+0.5×2−0.5=1；a₂=σ(1)≈0.731059
+y=2a₁+a₂≈1.268941
+若 t=1，L=½(1.268941−1)²≈0.036165</code></pre>
+<p>前向時逐層保留 z、a，反向會用到。不要先對每一中間值只留兩位小數，否則誤差可能逐步放大。</p>
+<h3 id="c1-h56">9.5 Chain Rule 與 Backpropagation</h3>
+<p>反向傳播是有效率地重用中間梯度，並依 chain rule 算每個參數的偏導；更新參數是 optimizer 的工作。</p>
+<p>對單一隱藏層、線性輸出與平方 loss：</p>
+<pre><code>hⱼ=f(zⱼ)，zⱼ=Σᵢwⱼᵢxᵢ+bⱼ
+y=Σⱼvⱼhⱼ+b_out，L=½(y−t)²
+δ_out = y−t
+∂L/∂vⱼ = δ_out hⱼ
+∂L/∂b_out = δ_out
+δⱼ = δ_out vⱼ f&#x27;(zⱼ)
+∂L/∂wⱼᵢ = δⱼ xᵢ
+∂L/∂bⱼ = δⱼ</code></pre>
+<p>對前例 t=1：δ_out≈0.268941；∂L/∂v₁=0.268941²≈0.072329；hidden1 的 δ₁≈0.268941×2×0.268941×0.731059≈0.105754；所以 ∂L/∂w₁₁≈0.105754、∂L/∂w₁₂≈0.211508。</p>
+<p>若一個節點通往多個下游節點，需要把所有路徑的貢獻加總：</p>
+<pre><code>定義 δˡ=∂L/∂zˡ
+δˡ = [(Wˡ⁺¹)ᵀδˡ⁺¹] ⊙ f&#x27;(zˡ)
+∂L/∂Wˡ = δˡ(aˡ⁻¹)ᵀ
+∂L/∂bˡ = δˡ
+⊙：逐元素相乘</code></pre>
+<p>必須先用同一次 forward 對應的舊權重算完所有梯度，再一起更新。不能先改輸出權重，再用已改過的值往回算 hidden 梯度。</p>
+<h3 id="c1-h57">9.6 Gradient Descent 的方向</h3>
+<pre><code>θ_new = θ_old − η∇L(θ_old)，η&gt;0</code></pre>
+<p>梯度為正就讓參數減少；梯度為負就讓參數增加。這是在目前點的局部下降方向，學習率太大仍可能跨過谷底、震盪或發散。</p>
+<p>一階 Taylor 展開：L(θ+Δ)≈L(θ)+∇LᵀΔ。選 Δ=−η∇L，變化近似 −η‖∇L‖²≤0，說明負梯度在小步長時為下降方向。這不能保證任意 η 都使實際 loss 下降。</p>
+<h3 id="c1-h58">9.7 深度、初始化與梯度問題</h3>
+<p>深層網路能重用階層化模組，例如像素→邊緣→物件部件→物件，對某些函數比非常寬的淺層網路更有效率。Universal approximation 的直覺是在適當 activation 與條件下，足夠寬的單隱藏層可在緊緻區間上任意逼近連續函數；<strong>不代表精確表示所有函數、不保證訓練找得到、不保證泛化</strong>。</p>
+<p>多層相乘的小導數可造成 vanishing gradients；ReLU 在正側導數1能緩解這種局部衰減，但負側導數0仍可能造成 dead ReLU，其他權重因子也可讓梯度消失／爆炸。</p>
+<p>同層 hidden units 若全部同樣初始化，收到相同梯度就會一直學同樣的特徵，破壞多單元的作用。通常隨機且尺度適當地初始化權重；bias 設0常可行。講「所有權重設0不好」不等於「任何參數都不能為0」。</p>
+<h2 id="c1-h59">10. 深度學習實務：最佳化、正則化、診斷</h2>
+<p>來源：L4 p.95–101；L5 p.4–39；考古 Q6.5。</p>
+<h3 id="c1-h60">10.1 Batch、SGD、Mini-batch 與 epoch</h3>
+<div class="tablewrap"><table><thead><tr><th>方法</th><th>一次更新看多少樣本</th><th>特性</th></tr></thead><tbody>
+<tr><td>Batch GD</td><td>所有 n 筆</td><td>全資料梯度，單次成本高</td></tr>
+<tr><td>SGD 狹義</td><td>1 筆</td><td>更新頻繁、梯度噪聲較大</td></tr>
+<tr><td>Mini-batch</td><td>B 筆</td><td>兼顧平行化與更新頻率</td></tr>
+</tbody></table></div>
+<p>一個 epoch 通常指整份訓練資料走過一次；iteration / step 指一次參數更新。若 n=1000、batch size=128，保留最後不足 batch 時，每 epoch 為 ceil(1000/128)=8 steps；若丟掉最後不足部分，為7 steps。Mini-batch 平均梯度為 (1/B)Σ∇Lᵢ，最後一批若大小不同需依實際定義處理。</p>
+<h3 id="c1-h61">10.2 最佳化器比較</h3>
+<p>以下公式是逐元素運算；g_t=∇L(θ_t)，ε 是穩定用的小正數。</p>
+<pre><code>Momentum（補充基本形式）：m_t=βm_(t−1)+(1−β)g_t；θ←θ−ηm_t
+Adagrad：G_t=G_(t−1)+g_t²；θ←θ−ηg_t/(√G_t+ε)
+RMSprop：v_t=ρv_(t−1)+(1−ρ)g_t²；θ←θ−ηg_t/(√v_t+ε)
+Adam：m_t=β₁m_(t−1)+(1−β₁)g_t
+      v_t=β₂v_(t−1)+(1−β₂)g_t²
+      m̂_t=m_t/(1−β₁ᵗ)，v̂_t=v_t/(1−β₂ᵗ)
+      θ←θ−ηm̂_t/(√v̂_t+ε)</code></pre>
+<p>Adagrad 累積所有歷史平方梯度，某些座標的有效步長可能越來越小；RMSprop 用移動平均緩解無限累積；Adam 結合一階與二階動量，偏差修正處理零初始化造成的初期低估。Adadelta 使用近期梯度與近期更新量的 RMS 比率來調整步長，常不需另手動設全域初始學習率，但仍有超參數。</p>
+<p>AdamW 把 weight decay 與自適應梯度更新分離；對 Adam 類最佳化器，直接把 L2 項混進梯度通常不等於 decoupled weight decay。這是解讀 L5 的 Adam / AdamW 脈絡補充，不需死背軟體 API。</p>
+<h3 id="c1-h62">10.3 Learning-rate schedule</h3>
+<pre><code>Exponential decay：η_t=η₀γᵗ，0&lt;γ&lt;1
+Cosine（單一衰減週期）：
+η_t=η_min+½(η_max−η_min)[1+cos(πt/T)]，0≤t≤T</code></pre>
+<p>Cosine 的起點 η_max、終點 η_min。有 warm restarts 的變體會重新提高學習率；不要把講義示意的重啟曲線與任何單一 cosine scheduler API 畫等號。Optimizer 決定如何用梯度，scheduler 決定學習率如何隨步數／epoch 變化。</p>
+<h3 id="c1-h63">10.4 看 learning curve 定位問題</h3>
+<ul>
+<li>Training、validation 都差：可能模型容量不夠、輸入訊號不足、最佳化不佳；先檢查 baseline、loss 定義、梯度與資料。</li>
+<li>Training 很好、validation 差：可能過度擬合或資料分布不同；考慮正則化、資料量與切分方式。</li>
+<li>Training loss 持續下降，validation loss 先降後升：典型過擬合訊號，可 early stopping。</li>
+</ul>
+<p>講義要求不只報單一數字，還要比較 baseline、畫 training curve、visualize、分析 failure cases、ablation（移除元件看效果）與 gradient。不同模型比較必須使用同樣資料切分、指標與合理訓練條件。</p>
+<h3 id="c1-h64">10.5 四種正則化方法</h3>
+<p><strong>Early stopping</strong>：監看 validation，若若干次未改善即停止，並保留 validation 最佳 checkpoint。它降低繼續擬合訓練噪聲的風險，不是保證在任何 overfitting 發生前神奇停止；不能用 test 反覆決定停止時刻。</p>
+<p><strong>L2 / Weight decay</strong>：以 loss_reg=loss_data+(λ/2)‖w‖²，梯度加 λw。在普通 SGD 下：</p>
+<pre><code>w_new=w−η(∇loss_data+λw)=(1−ηλ)w−η∇loss_data</code></pre>
+<p>λ 過大可能欠擬合。常不對 bias 加同樣懲罰，因 bias 主要平移，不直接控制輸入敏感度。不要把「權重衰減」理解為每一步每個權重絕對值都必然減少，資料梯度仍可把它推大。</p>
+<p><strong>Dropout</strong>：訓練時隨機遮蔽部分 activation，減少單元間過度依賴。它可視為訓練共享參數的許多子網路，但一般 test-time 的全網路近似不等於精確平均所有非線性子網路。</p>
+<pre><code>令 p=drop probability，q=1−p=keep probability
+講義的傳統版本：訓練 ã=m·a，測試用 q 倍貢獻
+常見 inverted dropout：訓練 ã=m·a/q，測試直接用 a
+m∼Bernoulli(q)，兩種版本不可同時重複縮放</code></pre>
+<p><strong>Data augmentation</strong>：用合理變換增加訓練樣本的多樣性，例如貓照片小幅平移、翻轉。必須保持標籤語意；數字6上下翻轉可能變9，所以不是任何轉換都安全有效。Augmentation 通常增加有效多樣性，不是減少訓練資料量。</p>
+<h2 id="c1-h65">11. 十二種學習問題：從監督來源辨識</h2>
+<p>來源：L5 p.40–92；考古 Q6.7–Q6.8。</p>
+<div class="tablewrap"><table><thead><tr><th>類型</th><th>核心定義</th><th>例子</th><th>常見混淆</th></tr></thead><tbody>
+<tr><td>Supervised 監督式</td><td>從 x–y 配對學預測</td><td>已標好 Spam/Ham 的信</td><td>有標籤不代表每個任務都一定分類</td></tr>
+<tr><td>Unsupervised 非監督式</td><td>無人工目標標籤，找資料結構</td><td>分群、PCA</td><td>群編號不是預先提供的真實答案</td></tr>
+<tr><td>Reinforcement 強化式</td><td>agent 與環境互動，以 reward 學策略</td><td>遊戲中選動作增加總回饋</td><td>reward 不等於每步都有正確動作標籤</td></tr>
+<tr><td>Semi-supervised 半監督式</td><td>少量 labeled 加大量 unlabeled</td><td>已標少量影像，再利用其餘影像</td><td>仍有部分人工標籤</td></tr>
+<tr><td>Self-supervised 自監督式</td><td>從資料本身建構目標</td><td>遮字預測、補圖、時序排序</td><td>不以外部人工逐例標記作為前置任務必要條件</td></tr>
+<tr><td>Multi-instance 多實例</td><td>一個 bag 含多 instance，常只有 bag 標籤</td><td>影像含很多區塊，只知道整張有無異常</td><td>標準二元 MIL 常假設正 bag 至少一個正 instance</td></tr>
+<tr><td>Multi-task 多任務</td><td>共同學多項任務並共享部分表示</td><td>同時預測影像類別與深度</td><td>多任務不等於多類別</td></tr>
+<tr><td>Active 主動式</td><td>主動挑最值得詢問的樣本請人／oracle 標註</td><td>優先標註模型最不確定的信</td><td>並非完全不用標籤</td></tr>
+<tr><td>Online 線上式</td><td>資料逐步到來，持續更新</td><td>串流資料每批更新</td><td>不等於單純把模型部署到網路</td></tr>
+<tr><td>Transfer 遷移式</td><td>把來源任務／領域知識用到目標</td><td>預訓練模型微調新類別</td><td>不保證一定改善，可能負遷移</td></tr>
+<tr><td>Ensemble 集成</td><td>合併多個模型</td><td>RF、投票、bagging</td><td>模型高度相關時改善可能有限</td></tr>
+<tr><td>Multi-source 多來源</td><td>結合不同來源的資訊</td><td>影像、文字、感測器共同輸入</td><td>多來源是輸入來源，不是多輸出任務</td></tr>
+</tbody></table></div>
+<h3 id="c1-h66">11.1 三組最常考比較</h3>
+<p><strong>Semi-supervised vs. Self-supervised</strong>：前者重點是 labeled/unlabeled 混合；後者重點是目標從資料自動產生。自監督預訓練後可以接監督微調，兩種方法並非互斥。</p>
+<p><strong>Active vs. Online</strong>：前者問「下一筆該請誰標」，後者問「如何隨新資料逐步更新」。同一系統可同時具備兩者。</p>
+<p><strong>Transfer vs. Multi-task vs. Multi-source</strong>：分別關注跨任務重用、一起學多目標、結合多輸入來源。可以在同一模型中同時發生。</p>
+<h3 id="c1-h67">11.2 強化學習基本循環</h3>
+<p>Agent 觀察 state s，依 policy 選 action a；環境回傳 reward r 與新 state s&#x27;，目標通常是最大化累積回報，而非只貪眼前 reward。RL 在模擬中可做大量試驗，真實世界試驗往往昂貴。這是課堂動機重點，不需要從本資料推定 Bellman equation 等未提供內容必考。</p>
+<h2 id="c1-h68">12. 把整門課串起來</h2>
+<p>看到有標籤的表格分類：先確認切分與評估，再比較樹、NB、k-NN、SVM 或 NN。看到無標籤的分群：先決定距離與尺度，再依群形狀、離群點與是否知道 k 選方法。高維距離無效時可考慮表徵與降維，但降維不得偷看 test。</p>
+<p>各方法都在做不同假設：NB 假設條件獨立；k-NN 假設局部相似性有意義；k-means 以平方距離與平均中心描述群；linear SVM 假設線性邊界足夠；NN 透過非線性層組合增加表示力。<strong>能說出「資料符合什麼假設、什麼情形會失敗、如何驗證」比背演算法名稱更接近這份考古題要求。</strong></p></section><section id="c2" class="chapter" data-name="考古題逐題詳解"><details class="solution" open><summary>展開／收起：考古題逐題詳解（含答案）</summary><h1 id="c2-h1">Fall 2025 期中考｜逐題詳解</h1>
+<details class="chaptertoc"><summary>本篇目錄</summary><ul><li><a href="#c2-h2">Q1. Decision Tree Learning（16分；PDF p.1）</a></li><li><a href="#c2-h6">Q2. Naive Bayes Classification（15分；PDF p.1–2）</a></li><li><a href="#c2-h11">Q3. Neural Network and Intro Deep Learning（20分；PDF p.2）</a></li><li><a href="#c2-h16">Q4. Decision Boundary &amp; SVM（20分；PDF p.3）</a></li><li><a href="#c2-h21">Q5. Clustering（5分；PDF p.3）</a></li><li><a href="#c2-h22">Q6. Smart Choices（24分；PDF p.3–4）</a></li><li><a href="#c2-h31">全卷作答核對</a></li></ul></details>
+<p>來源：<a href="../考古題.pdf">考古題.pdf</a>，共4頁，滿分100。以下為依題目推導的參考解答，非教師官方答案。Q1(a) 與 Q1(b) 是不同資料，不能沿用類別計數。數值保留較多位供核對，正式作答可依題意取兩位或保留 log 表達式。</p>
+<h2 id="c2-h2">Q1. Decision Tree Learning（16分；PDF p.1）</h2>
+<h3 id="c2-h3">Q1(a) Fever 的資訊增益（3分）</h3>
+<p>題目：共8筆，4 True、4 False。Fever=Yes 有 (2T,1F)，Fever=No 有 (2T,3F)。</p>
+<pre><code>H(parent)=−(4/8)log₂(4/8)−(4/8)log₂(4/8)=1
+H(Yes)=−(2/3)log₂(2/3)−(1/3)log₂(1/3)≈0.918296
+H(No)=−(2/5)log₂(2/5)−(3/5)log₂(3/5)≈0.970951
+H(after)=(3/8)H(Yes)+(5/8)H(No)≈0.951205
+IG(Fever)=1−0.951205≈0.048795 bit</code></pre>
+<p>得分重點是先寫父熵，兩個子熵，再依3/8與5/8加權。若直接把兩個熵取算術平均，會錯。</p>
+<h3 id="c2-h4">Q1(b) 三個屬性、選根與前兩層（8分）</h3>
+<p>原表8筆標籤為 T,T,F,F,F,F,T,F，總共 <strong>3T、5F</strong>。這與(a)不同。</p>
+<pre><code>H(S)=−(3/8)log₂(3/8)−(5/8)log₂(5/8)≈0.954434
+h(1/4)=h(3/4)≈0.811278；h(1/2)=1</code></pre>
+<div class="tablewrap"><table><thead><tr><th>特徵</th><th>Yes 分支 (T,F)</th><th>No 分支 (T,F)</th><th>分割後加權熵</th><th>IG</th></tr></thead><tbody>
+<tr><td>Fever</td><td>(2,2)</td><td>(1,3)</td><td>½×1+½×0.811278=0.905639</td><td>0.048795</td></tr>
+<tr><td>Cough</td><td>(2,2)</td><td>(1,3)</td><td>0.905639</td><td>0.048795</td></tr>
+<tr><td>SoreThroat</td><td>(1,3)</td><td>(2,2)</td><td>½×0.811278+½×1=0.905639</td><td>0.048795</td></tr>
+</tbody></table></div>
+<p><strong>三者資訊增益完全相同，任一個都可以作根。</strong> 題目沒有提供額外平手規則，因此不能宣稱 Fever 是唯一答案。這裡以題目列示順序破平手，選 Fever。</p>
+<p>如果「前兩層」把根算第1層，最少畫出：</p>
+<pre><code>                  Fever [3T,5F]
+                 /             \
+            Y [2T,2F]       N [1T,3F]</code></pre>
+<p>若題意指要呈現兩輪切割，畫到下面這個版本更完整，也可清楚交代下一層選擇：</p>
+<pre><code>                        Fever [3T,5F]
+                    Y /               \ N
+             Cough [2T,2F]        Cough [1T,3F]
+              /        \           /        \
+         Y [2T,0F] N [0T,2F]  Y [0T,2F] N [1T,1F]
+             T          F          F        尚未純</code></pre>
+<p>在 Fever=Y 子群：Cough=Y 全T、Cough=N 全F，因此 IG(Cough)=1；SoreThroat 兩邊都 (1T,1F)，IG=0，選 Cough。</p>
+<p>在 Fever=N 子群：父熵0.811278。Cough 分出 (0T,2F) 與 (1T,1F)，加權熵0.5，IG=0.311278；SoreThroat 分出 (1T,1F) 與 (0T,2F)，IG同樣0.311278。可再任選其一，圖中選 Cough。這些第二層計算只用所在子群，不能繼續用全表的0.048795。</p>
+<p>若繼續長成完整樹，最後的 Fever=N、Cough=N 子群用 SoreThroat 切，Y→T、N→F。題目只要部分樹，混合節點可保留類別分布，不必勉強標成唯一類別；若需當葉輸出，平手另指定規則。</p>
+<h3 id="c2-h5">Q1(c) 避免過度擬合的兩種方法（5分）</h3>
+<p>可直接寫：</p>
+<ol>
+<li><strong>Pre-pruning</strong>：限制最大深度或最小葉樣本數，避免樹繼續切割到少量樣本與噪聲；以驗證集選限制程度。</li>
+<li><strong>Post-pruning</strong>：先建立完整樹，再將對驗證表現沒有幫助的分支替換成葉節點，降低模型複雜度。</li>
+</ol>
+<p>兩者是明確不同的策略。只寫「別過度擬合」「增加準確率」沒有機制，不足以拿完整分數。</p>
+<h2 id="c2-h6">Q2. Naive Bayes Classification（15分；PDF p.1–2）</h2>
+<h3 id="c2-h7">先判定題目模型</h3>
+<p>原題提到100封 spam、100封 ham，卻提供詞「出現40次、5次」等計數，文字可讓人誤解為文件出現率。然而公式表明列 <strong>multinomial smoothing</strong>，且新信為「$$$ $$$ hello」，強調重複次數，因此本解採 <strong>Multinomial NB 的 token counts</strong>。</p>
+<p>詞彙只有2個，|V|=2，不可沿用公式表範例的 |V|=3。每類100封文件只用於理解資料與 prior；Multinomial likelihood 的分母是該類的總詞次。</p>
+<h3 id="c2-h8">Q2(a) 平滑後條件機率（5分）</h3>
+<pre><code>P(w|y)=[count(w,y)+1]/[Σ_v count(v,y)+|V|]
+Spam token總數=40+5=45；分母45+2=47
+Ham token總數=2+50=52；分母52+2=54</code></pre>
+<div class="tablewrap"><table><thead><tr><th>機率</th><th>正確值</th></tr></thead><tbody>
+<tr><td>P($$$|Spam)</td><td>41/47≈0.872340</td></tr>
+<tr><td>P(hello|Spam)</td><td>6/47≈0.127660</td></tr>
+<tr><td>P($$$|Ham)</td><td>3/54=1/18≈0.055556</td></tr>
+<tr><td>P(hello|Ham)</td><td>51/54=17/18≈0.944444</td></tr>
+</tbody></table></div>
+<p>每一類內兩個機率相加為1，這是快速檢查分母的方法。若寫成41/102與6/102，雖像文件發生率，卻不是這題公式表指定的 Multinomial 模型。</p>
+<h3 id="c2-h9">Q2(b) 分類「$$$ $$$ hello」（6分）</h3>
+<p>令 c_$$$=2、c_hello=1。兩類 prior皆0.5，分類分數：</p>
+<pre><code>s_S = 0.5 × (41/47)² × (6/47) ≈ 0.0485730522
+s_H = 0.5 × (3/54)² × (51/54) ≈ 0.0014574760
+ln s_S = ln(0.5)+2ln(41/47)+ln(6/47) ≈ −3.024686
+ln s_H = ln(0.5)+2ln(3/54)+ln(51/54) ≈ −6.531049</code></pre>
+<p>−3.024686 &gt; −6.531049，因此預測 <strong>Spam</strong>。小心負數越接近0才越大。</p>
+<p>上述為省略共同因素的 log scores，並非已正規化的 log posterior。若另外要求 posterior，可算：P(Spam|x)=s_S/(s_S+s_H)≈0.970868，Ham≈0.029132。題目允許略去兩類共同因子，無須加 multinomial coefficient 3!/(2!1!)；即使加上，分類與 posterior 仍不變。</p>
+<h3 id="c2-h10">Q2(c) 獨立假設違反（4分）</h3>
+<p>參考回答：如果「free」與「$$$」在給定類別後仍相關，Naive Bayes 可能把同一類訊息重複算成兩份獨立證據，使預測機率過度自信，甚至改變分類；但即使獨立假設不完全成立，類別排序仍可能正確，不代表必定失效。</p>
+<p><strong>閱讀歧義補充</strong>：若教師明確指定計數是「有該詞的文件數」且採 Bernoulli，才用分母102，且重複$$$不會平方。不能同時採 Bernoulli 分母與 Multinomial 詞頻規則。此題應依公式表採上方主解。</p>
+<h2 id="c2-h11">Q3. Neural Network and Intro Deep Learning（20分；PDF p.2）</h2>
+<h3 id="c2-h12">Q3(a) Leaky Step 連續嗎（4分）</h3>
+<pre><code>f(z)=1，z&gt;1
+f(z)=0.1，−1≤z≤1
+f(z)=0，z&lt;−1</code></pre>
+<p><strong>不連續；跳點為 z=−1、z=1。</strong></p>
+<p>在 z=−1，左極限0、右極限0.1，f(−1)=0.1；在 z=1，左極限0.1、右極限1，f(1)=0.1。左右極限不同，因此不是連續。</p>
+<p>分段常數在其他點導數0，在兩個跳點不可微；用梯度更新時幾乎處處沒有可用的非零局部梯度，因此前層權重難以透過一般 backprop 學習。名稱含 Leaky 不代表它有 Leaky ReLU 的負側斜率。</p>
+<h3 id="c2-h13">Q3(b) 2→3→2 網路有多少參數（4分）</h3>
+<pre><code>Input→Hidden：2×3 個連接權重 +3 個 hidden biases=9
+Hidden→Output：3×2 個連接權重 +2 個 output biases=8
+總數=9+8=17</code></pre>
+<p>若只算連接權重是12，但題目要求包含 bias，答案為 <strong>17</strong>。Softmax 沒有額外可訓練參數；雖可用單輸出 sigmoid 寫另一種二分類架構，但題目已指定2個輸出，不能自行換架構。</p>
+<h3 id="c2-h14">Q3(c) Forward pass（6分）</h3>
+<p>給 x₁=2、x₂=1。</p>
+<pre><code>z₁=0.5×2+(−1)×1+0=0
+a₁=σ(0)=0.5
+z₂=1×2+1×1−1=2
+a₂=σ(2)=1/(1+e⁻²)≈0.880797
+y=2a₁−3a₂+1
+ =1−2.642391+1
+ ≈−0.642391</code></pre>
+<p>兩位小數可寫 z₁=0、a₁=0.50、z₂=2、a₂=0.88、y≈−0.64。輸出層是 linear，<strong>不可再套 sigmoid</strong>；所以輸出負數完全合理。</p>
+<h3 id="c2-h15">Q3(d) 輸出層第一條權重的梯度（6分）</h3>
+<p>L=½(y−t)²，t=0；v₁ 是 a₁ 連到輸出的權重，值為2。</p>
+<pre><code>∂L/∂v₁=(∂L/∂y)(∂y/∂v₁)=(y−t)a₁
+        =(−0.642391−0)×0.5≈−0.321196</code></pre>
+<p>答案約 <strong>−0.32</strong>。此處不需要乘 sigmoid&#x27;(z₁)，因為 v₁ 位在 sigmoid <strong>之後</strong>；若對 hidden 輸入權重微分，才會穿過 hidden sigmoid。</p>
+<p>延伸自學（非本小題要求）：若 η=0.1，v₁,new=2−0.1×(−0.321196)=2.032120。負梯度使權重增加，因增加正的 v₁ 能把目前偏負的 y 往0拉。</p>
+<p>延伸 hidden1 的輸入權重梯度：δ₁=(y−t)v₁a₁(1−a₁)=−0.321196；對 x₁ 連入的 w₁₁，其梯度 δ₁×2=−0.642391；對 x₂ 的 w₁₂ 梯度為−0.321196。注意使用更新前的 v₁=2。</p>
+<h2 id="c2-h16">Q4. Decision Boundary &amp; SVM（20分；PDF p.3）</h2>
+<h3 id="c2-h17">Q4(a) 是否線性可分（2分）</h3>
+<p>Class0：(0,0)、(1,0)、(0,1)，其 x₁+x₂ 為0或1；Class1：(1,1)、(2,1)、(1,2)，其和為2或3。</p>
+<p>因此 <strong>線性可分</strong>，例如 x₁+x₂=1.5（亦即 x₂=1.5−x₁）。在圖上畫通過 (0,1.5)、(1.5,0) 的線；class0在和較小的一側，class1在和較大的一側。</p>
+<h3 id="c2-h18">Q4(b) w、b、margin、support vectors 與縮放（9分）</h3>
+<p>採 Class0→y=−1、Class1→y=+1。</p>
+<pre><code>w=(1,1)ᵀ，b=−1.5；‖w‖=√2</code></pre>
+<div class="tablewrap"><table><thead><tr><th>x</th><th>y</th><th>g(x)=x₁+x₂−1.5</th><th>y g(x)</th><th>geometric margin</th></tr></thead><tbody>
+<tr><td>(0,0)</td><td>−1</td><td>−1.5</td><td>1.5</td><td>1.5/√2</td></tr>
+<tr><td>(1,0)</td><td>−1</td><td>−0.5</td><td>0.5</td><td>0.5/√2</td></tr>
+<tr><td>(0,1)</td><td>−1</td><td>−0.5</td><td>0.5</td><td>0.5/√2</td></tr>
+<tr><td>(1,1)</td><td>+1</td><td>0.5</td><td>0.5</td><td>0.5/√2</td></tr>
+<tr><td>(2,1)</td><td>+1</td><td>1.5</td><td>1.5</td><td>1.5/√2</td></tr>
+<tr><td>(1,2)</td><td>+1</td><td>1.5</td><td>1.5</td><td>1.5/√2</td></tr>
+</tbody></table></div>
+<p>資料集的最小 geometric margin 為 <strong>0.5/√2=1/(2√2)≈0.353553</strong>。三個最近點／本題最佳邊界的支援向量為 <strong>(1,0)、(0,1)、(1,1)</strong>。</p>
+<p>若要使用標準 SVM 規範 y g(x)≥1，可將 w、b 乘2，得到 w=(2,2)、b=−3；此時最小 functional margin=1，geometric margin=1/√8，數值仍0.353553。</p>
+<p>這條線為最大 margin 的理由（延伸）：負類凸包最近的一面為 x₁+x₂=1，正類凸包最近點為(1,1)，最近負類凸包點為(0.5,0.5)，兩凸包距離1/√2；最佳分隔線在中間，最大單側距離為1/(2√2)。兩條支撐線是 x₁+x₂=1 和 x₁+x₂=2，完整帶寬1/√2≈0.707107，<strong>不是題目要的單側 margin</strong>。</p>
+<p>縮放 c&gt;0：</p>
+<ul>
+<li>Functional margins 全部乘 c，因 y(cwᵀx+cb)=c·y(wᵀx+b)。</li>
+<li>Geometric margins 不變，因 ‖cw‖=c‖w‖，分子分母相消。</li>
+</ul>
+<h3 id="c2-h19">Q4(c) 不可分資料如何處理（4分）</h3>
+<p><strong>原題敘述有誤</strong>：「即使資料不可分，hard-margin SVM 仍會找最小誤分類分隔線」不成立。Hard-margin 的約束要求所有點有正的標準 margin；不可分時無可行解。本題原始資料其實可分，但這個一般性說法仍錯。</p>
+<p>要求的兩個方法：</p>
+<ol>
+<li><strong>Soft-margin SVM</strong>：引入 ξᵢ≥0，並使用 C 控制違反 margin 的懲罰，容許某些樣本進入 margin 或被分錯。</li>
+<li><strong>Kernel / feature transformation</strong>：用非線性特徵空間學線性分隔面，讓原空間的非線性模式有機會被分開；不保證任何資料都可分，必要時仍搭配 soft margin。</li>
+</ol>
+<p>C 是懲罰係數，不是直接把不可分資料「變成線性可分」的開關。</p>
+<h3 id="c2-h20">Q4(d) 二次 polynomial kernel（5分）</h3>
+<p>題目的 kernel 常數寫作 C，此處改記 c₀，避免與 soft-margin C 混淆。</p>
+<pre><code>K(x,z)=(x₁z₁+x₂z₂+c₀)²</code></pre>
+<ol>
+<li>c₀=0：展開為 x₁²z₁²+2x₁x₂z₁z₂+x₂²z₂²，包含原特徵的平方 x₁²、x₂² 與交叉項 x₁x₂。可用 φ₀(x)=(x₁²,√2x₁x₂,x₂²)。</li>
+<li>c₀=1：額外出現 2x₁z₁+2x₂z₂+1，所以新增一次特徵 x₁、x₂ 與常數特徵1。可用 φ₁(x)=(x₁²,√2x₁x₂,x₂²,√2x₁,√2x₂,1)。</li>
+<li>Kernel trick：SVM 的 dual 與預測只需要樣本間的內積。使用 K(x,z)=φ(x)ᵀφ(z) 直接算內積，就能在豐富特徵空間中訓練／預測，不需明列所有額外特徵。</li>
+</ol>
+<p>答案若只寫「升維所以一定可分」缺乏機制且過度保證；應點出「內積替換」與「不必明算 φ」。</p>
+<h2 id="c2-h21">Q5. Clustering（5分；PDF p.3）</h2>
+<p>參考回答：k-means 交替進行指派與更新中心，每步雖不增加平方誤差，但整體問題非凸，可能收斂到不同局部解，因此初始中心不同可造成最終分群不同。可用 k-means++ 初始化，或多次隨機重啟後保留 SSE 最低者，降低不良初始化的影響。</p>
+<p>兩個常見錯法：只說「因為隨機」沒有說明局部解；或說「固定 random seed 就更準確」。固定種子僅保證可重現。</p>
+<h2 id="c2-h22">Q6. Smart Choices（24分；PDF p.3–4）</h2>
+<p>每小題3分，選出所有正確敘述。下表是參考判斷；6.1(d) 依樹類型有歧義，不能冒稱有唯一官方答案。</p>
+<h3 id="c2-h23">Q6.1 Decision trees</h3>
+<div class="tablewrap"><table><thead><tr><th>選項</th><th>判斷</th><th>理由</th></tr></thead><tbody>
+<tr><td>(a) 足夠深可表示任何布林函數</td><td>正確</td><td>對有限布林輸入可逐一測各變數，葉端對應真值表</td></tr>
+<tr><td>(b) ID3 每次 split 後熵必定下降</td><td>錯誤</td><td>IG 可為0；加權熵不增加不等於嚴格下降，個別子熵也可能增加</td></tr>
+<tr><td>(c) Pruning 可降低 overfitting</td><td>正確</td><td>刪掉對泛化無益的細碎分支</td></tr>
+<tr><td>(d) 同一路徑用同屬性兩次必冗餘</td><td>有條件</td><td>離散完整分支 ID3 為真；連續特徵可重用不同閾值，廣義樹則不成立</td></tr>
+</tbody></table></div>
+<p><strong>無條件可確認的是 (a)、(c)。若依基本離散 ID3 脈絡，參考選 (a)、(c)、(d)；若「standard decision trees」包含連續特徵樹，則選 (a)、(c)。</strong> 作備考時務必記條件，而不是只背一組字母。</p>
+<h3 id="c2-h24">Q6.2 k-NN：選 (a)、(b)、(c)、(d)</h3>
+<div class="tablewrap"><table><thead><tr><th>選項</th><th>判斷</th><th>理由</th></tr></thead><tbody>
+<tr><td>(a) k=1，無重複矛盾點時 training error=0</td><td>正確</td><td>一般訓練誤差評估包含查詢點自己；不代表 leave-one-out</td></tr>
+<tr><td>(b) 較小 k 通常提高 variance、降低 bias</td><td>正確</td><td>更依賴局部樣本與噪聲，邊界更細</td></tr>
+<tr><td>(c) 高維度損害最近鄰搜尋效率</td><td>正確</td><td>距離集中與索引退化等維度災難現象</td></tr>
+<tr><td>(d) 可自然以投票處理多類別</td><td>正確</td><td>不限二元類別</td></tr>
+</tbody></table></div>
+<h3 id="c2-h25">Q6.3 Naive Bayes：選 (a)、(c)</h3>
+<div class="tablewrap"><table><thead><tr><th>選項</th><th>判斷</th><th>理由</th></tr></thead><tbody>
+<tr><td>(a) 給定類別後特徵條件獨立</td><td>正確</td><td>正是 naive 假設</td></tr>
+<tr><td>(b) 零訓練誤差代表訓練標籤機率1</td><td>錯誤</td><td>預測正確只需正確類別的 posterior 最大</td></tr>
+<tr><td>(c) Laplace 避免未見值零 likelihood</td><td>正確</td><td>在既定有限可能值／詞彙內加入正偽計數</td></tr>
+<tr><td>(d) NB 是 discriminative</td><td>錯誤</td><td>是 generative，建 P(x|y) 與 P(y)</td></tr>
+</tbody></table></div>
+<h3 id="c2-h26">Q6.4 Neural networks：選 (a)、(c)、(d)</h3>
+<div class="tablewrap"><table><thead><tr><th>選項</th><th>判斷</th><th>理由</th></tr></thead><tbody>
+<tr><td>(a) ReLU 正側有助緩解梯度消失</td><td>正確</td><td>z&gt;0時導數1；不代表所有情況都消除</td></tr>
+<tr><td>(b) 所有權重設0很好</td><td>錯誤</td><td>hidden units 對稱，可能學成相同特徵</td></tr>
+<tr><td>(c) 增加 hidden units 可降 training error，也提高 overfit 風險</td><td>正確</td><td>表示能力變大；仍取決於最佳化與正則化</td></tr>
+<tr><td>(d) Backprop 使用 chain rule</td><td>正確</td><td>從輸出沿相依關係向後求梯度</td></tr>
+</tbody></table></div>
+<h3 id="c2-h27">Q6.5 Deep Learning Regularization：依一般課堂語意選 (a)、(b)、(c)</h3>
+<div class="tablewrap"><table><thead><tr><th>選項</th><th>判斷</th><th>理由</th></tr></thead><tbody>
+<tr><td>(a) Early stopping 在過擬合前停止</td><td>課堂意圖為真，字面過強</td><td>方法用 validation 決定停止，目的是避免進一步過擬合，並非時間上的絕對保證</td></tr>
+<tr><td>(b) Dropout 訓練時隨機移除 neurons</td><td>正確</td><td>指暫時遮蔽 activation／連結貢獻，不是永久刪參數</td></tr>
+<tr><td>(c) Weight decay 懲罰大權重以降低有效複雜度</td><td>正確</td><td>權重懲罰促進較小範數</td></tr>
+<tr><td>(d) Data augmentation 減少 training data</td><td>錯誤</td><td>增加資料變化與有效多樣性</td></tr>
+</tbody></table></div>
+<h3 id="c2-h28">Q6.6 Confused?：只選 (a)</h3>
+<p>TP=80、FP=20、FN=40、TN=60，總數200。</p>
+<pre><code>Precision=80/(80+20)=0.8
+Recall=80/(80+40)=2/3≈0.666667
+F1=160/(160+20+40)=8/11≈0.727273
+Accuracy=(80+60)/200=0.7</code></pre>
+<div class="tablewrap"><table><thead><tr><th>選項</th><th>判斷</th><th>理由</th></tr></thead><tbody>
+<tr><td>(a) Precision &gt; Recall</td><td>正確</td><td>0.8&gt;0.666667</td></tr>
+<tr><td>(b) Recall &gt; F1</td><td>錯誤</td><td>0.666667&lt;0.727273</td></tr>
+<tr><td>(c) Precision = Recall</td><td>錯誤</td><td>分母不同且數值不同</td></tr>
+<tr><td>(d) Accuracy = F1</td><td>錯誤</td><td>0.7≠0.727273</td></tr>
+</tbody></table></div>
+<h3 id="c2-h29">Q6.7 Learning Paradigms I：選 (a)、(b)、(c)</h3>
+<div class="tablewrap"><table><thead><tr><th>選項</th><th>判斷</th><th>理由</th></tr></thead><tbody>
+<tr><td>(a) Supervised 從 labeled input-output pairs 學習</td><td>正確</td><td>有目標答案</td></tr>
+<tr><td>(b) Unsupervised 無標籤發現結構／群</td><td>正確</td><td>分群為典型例子</td></tr>
+<tr><td>(c) RL 與環境互動、接受 reward</td><td>正確</td><td>用回饋學策略</td></tr>
+<tr><td>(d) Self-supervised 用外部人工標籤訓練</td><td>錯誤</td><td>前置目標從資料自身產生；之後可另接監督微調</td></tr>
+</tbody></table></div>
+<h3 id="c2-h30">Q6.8 Learning Paradigms II：選 (b)、(c)、(d)</h3>
+<div class="tablewrap"><table><thead><tr><th>選項</th><th>判斷</th><th>理由</th></tr></thead><tbody>
+<tr><td>(a) Active learning 完全不用標籤</td><td>錯誤</td><td>主動選樣本請 oracle 提供標籤</td></tr>
+<tr><td>(b) Transfer 重用來源任務／領域的知識</td><td>正確</td><td>例如預訓練後微調</td></tr>
+<tr><td>(c) Multi-task 在相關任務間共享表示</td><td>正確</td><td>可改善泛化，但不是保證每次都改善</td></tr>
+<tr><td>(d) Semi-supervised 結合 labeled 與 unlabeled</td><td>正確</td><td>與完全無標籤不同</td></tr>
+</tbody></table></div>
+<h2 id="c2-h31">全卷作答核對</h2>
+<div class="tablewrap"><table><thead><tr><th>小題</th><th>核心答案</th></tr></thead><tbody>
+<tr><td>1(a)</td><td>IG≈0.048795</td></tr>
+<tr><td>1(b)</td><td>父熵0.954434；三屬性 IG 均0.048795，平手</td></tr>
+<tr><td>1(c)</td><td>Pre-pruning、Post-pruning</td></tr>
+<tr><td>2(a)</td><td>41/47、6/47、3/54、51/54</td></tr>
+<tr><td>2(b)</td><td>ln scores≈−3.024686、−6.531049，Spam</td></tr>
+<tr><td>3(a)</td><td>−1、1不連續；其餘處導數0</td></tr>
+<tr><td>3(b)</td><td>17</td></tr>
+<tr><td>3(c)</td><td>z=(0,2)、a=(0.5,0.880797)、y≈−0.642391</td></tr>
+<tr><td>3(d)</td><td>≈−0.321196</td></tr>
+<tr><td>4(a)</td><td>可分，x₁+x₂=1.5</td></tr>
+<tr><td>4(b)</td><td>w=(1,1)、b=−1.5；margin≈0.353553；三個SV</td></tr>
+<tr><td>4(c)</td><td>Soft margin + C；Kernel；先修正 hard-margin 誤敘</td></tr>
+<tr><td>4(d)</td><td>平方與交叉項；c₀=1增加一次項與常數</td></tr>
+<tr><td>5</td><td>非凸／局部解；k-means++或多次重啟</td></tr>
+<tr><td>6</td><td>見逐項說明；6.1(d)、6.5(a)有語意條件</td></tr>
+</tbody></table></div></details></section><section id="c3" class="chapter" data-name="公式速查與易錯觀念"><h1 id="c3-h1">公式速查、解題模板與易錯觀念</h1>
+<details class="chaptertoc"><summary>本篇目錄</summary><ul><li><a href="#c3-h2">1. 公式一覽</a></li><li><a href="#c3-h3">2. 五套手算流程</a></li><li><a href="#c3-h9">3. 二十五個容易被改寫的觀念</a></li><li><a href="#c3-h10">4. 三種「正則化強弱」別背反</a></li><li><a href="#c3-h11">5. 申論答題句型</a></li><li><a href="#c3-h12">6. 中英對照</a></li></ul></details>
+<p>這篇用於已理解教材後的快速複習。所有 log 的底依題目規定；熵採 log₂，NB log score 可採任何固定底。</p>
+<h2 id="c3-h2">1. 公式一覽</h2>
+<div class="tablewrap"><table><thead><tr><th>主題</th><th>公式</th><th>先確認什麼</th></tr></thead><tbody>
+<tr><td>z-score</td><td>x&#x27;=(x−μ)/s</td><td>μ、s 只用訓練資料估計</td></tr>
+<tr><td>歐氏距離</td><td>√Σⱼ(xⱼ−zⱼ)²</td><td>欄位尺度是否可比</td></tr>
+<tr><td>k-means</td><td>SSE=ΣⱼΣₓ∈Cⱼ‖x−μⱼ‖²</td><td>先指派最近中心，再平均</td></tr>
+<tr><td>Centroid</td><td>μⱼ=(1/|Cⱼ|)Σₓ∈Cⱼx</td><td>不一定是資料中的點</td></tr>
+<tr><td>Silhouette</td><td>s=(b−a)/max(a,b)</td><td>b 是最近「其他群的平均距離」</td></tr>
+<tr><td>PCA covariance</td><td>S=(1/n)Σ(xᵢ−μ)(xᵢ−μ)ᵀ</td><td>先中心化；注意矩陣方向</td></tr>
+<tr><td>PCA projection</td><td>z=Wᵀ(x−μ)</td><td>W 的欄為主方向時</td></tr>
+<tr><td>Explained variance</td><td>(Σ前k個λ)/(Σ全部λ)</td><td>λ 由大至小</td></tr>
+<tr><td>Entropy</td><td>H=−Σp𝚌log₂p𝚌</td><td>0log0=0；p來自類別比例</td></tr>
+<tr><td>IG</td><td>H(parent)−ΣᵥqᵥH(childᵥ)</td><td>qᵥ=子群大小／父群大小</td></tr>
+<tr><td>SplitInfo</td><td>−Σᵥqᵥlog₂qᵥ</td><td>q是分支比例，不是類別比例</td></tr>
+<tr><td>Gain ratio</td><td>IG/SplitInfo</td><td>分母不可為0</td></tr>
+<tr><td>Gini</td><td>1−Σp𝚌²</td><td>分割後也需加權</td></tr>
+<tr><td>χ²</td><td>Σ(O−E)²/E</td><td>E=列總×欄總／總數</td></tr>
+<tr><td>Bayes</td><td>P(y|x)=P(x|y)P(y)/P(x)</td><td>likelihood 與 posterior 方向不同</td></tr>
+<tr><td>NB</td><td>score(y)=P(y)∏ⱼP(xⱼ|y)</td><td>給定y後獨立</td></tr>
+<tr><td>Multinomial smoothing</td><td>(count(w,y)+α)/(總token數+α|V|)</td><td>不是文件數</td></tr>
+<tr><td>Bernoulli smoothing</td><td>(有詞文件數+α)/(類文件數+2α)</td><td>0/1輸入；也計入未出現詞</td></tr>
+<tr><td>NB text log score</td><td>logP(y)+Σ_wc_w logP(w|y)</td><td>重複詞以c_w乘上log機率</td></tr>
+<tr><td>Gaussian density</td><td>exp[−(x−μ)²/(2σ²)]/√(2πσ²)</td><td>是密度，非單點機率</td></tr>
+<tr><td>Functional margin</td><td>yᵢ(wᵀxᵢ+b)</td><td>y 必須轉為±1</td></tr>
+<tr><td>Geometric margin</td><td>yᵢ(wᵀxᵢ+b)/‖w‖</td><td>signed；分錯可負</td></tr>
+<tr><td>點到平面距離</td><td>|wᵀx+b|/‖w‖</td><td>不帶類別符號</td></tr>
+<tr><td>Hard SVM</td><td>min½‖w‖²，yg(x)≥1</td><td>需可分</td></tr>
+<tr><td>Soft SVM</td><td>min½‖w‖²+CΣξ，yg(x)≥1−ξ</td><td>C大更重罰違反</td></tr>
+<tr><td>標準單側／雙側margin</td><td>1/‖w‖ ／ 2/‖w‖</td><td>需先採min yg=1規範</td></tr>
+<tr><td>Kernel prediction</td><td>g(x)=ΣαᵢyᵢK(xᵢ,x)+b</td><td>yᵢ 不可漏掉</td></tr>
+<tr><td>Perceptron</td><td>若yg≤0：w←w+ηyx，b←b+ηy</td><td>不是最大margin演算法</td></tr>
+<tr><td>Dense參數數量</td><td>(輸入數+1)×輸出數</td><td>+1代表每個輸出一個bias</td></tr>
+<tr><td>Neuron</td><td>z=Σwx+b，a=f(z)</td><td>z與a分開</td></tr>
+<tr><td>Sigmoid</td><td>σ=1/(1+e⁻ᶻ)，σ&#x27;=σ(1−σ)</td><td>σ(0)=0.5</td></tr>
+<tr><td>Tanh</td><td>tanh&#x27; =1−tanh²</td><td>值域(−1,1)</td></tr>
+<tr><td>ReLU</td><td>max(0,z)</td><td>正側1、負側0，0不可微</td></tr>
+<tr><td>Softmax</td><td>pₖ=eᶻᵏ/Σeᶻʲ</td><td>輸出和1</td></tr>
+<tr><td>Squared loss</td><td>L=½(y−t)²，∂L/∂y=y−t</td><td>沒½則多一個2</td></tr>
+<tr><td>CE</td><td>−Σtₖlogpₖ</td><td>one-hot為−logp_true</td></tr>
+<tr><td>Softmax+CE</td><td>∂L/∂z=p−t</td><td>是對logits微分</td></tr>
+<tr><td>Output edge gradient</td><td>∂L/∂vⱼ=(y−t)aⱼ</td><td>線性輸出、半平方loss</td></tr>
+<tr><td>Hidden delta</td><td>δⱼ=(y−t)vⱼf&#x27;(zⱼ)</td><td>上游有多個分支要加總</td></tr>
+<tr><td>General backprop</td><td>δˡ=((Wˡ⁺¹)ᵀδˡ⁺¹)⊙f&#x27;(zˡ)</td><td>轉置與逐元素乘不要混淆</td></tr>
+<tr><td>GD</td><td>θ←θ−η∇L</td><td>梯度負則參數增加</td></tr>
+<tr><td>L2 SGD</td><td>w←(1−ηλ)w−η∇L_data</td><td>正則項定義為λ‖w‖²/2</td></tr>
+<tr><td>Precision</td><td>TP/(TP+FP)</td><td>預測正中有多少真正</td></tr>
+<tr><td>Recall / TPR</td><td>TP/(TP+FN)</td><td>真正正中找回多少</td></tr>
+<tr><td>Accuracy</td><td>(TP+TN)/總數</td><td>不平衡時可誤導</td></tr>
+<tr><td>F1</td><td>2TP/(2TP+FP+FN)</td><td>沒有TN</td></tr>
+<tr><td>FPR</td><td>FP/(FP+TN)</td><td>ROC橫軸</td></tr>
+<tr><td>OvO分類器數</td><td>m(m−1)/2</td><td>OvR為m</td></tr>
+<tr><td>每epoch steps</td><td>ceil(n/B)</td><td>若drop last則floor</td></tr>
+</tbody></table></div>
+<h2 id="c3-h3">2. 五套手算流程</h2>
+<h3 id="c3-h4">決策樹</h3>
+<p>數類別 → 算父熵 → 列各分支計數 → 算各子熵 → <strong>依樣本數加權</strong> → 算增益 → 比大小／交代平手 → 畫節點分布。</p>
+<p>合理性：二元熵在[0,1]；純節點熵0；IG不應負。若算負，先檢查分母、log負號與加權。</p>
+<h3 id="c3-h5">Naive Bayes</h3>
+<p>先判定特徵是詞頻、出現與否或一般類別 → 算prior → 正確平滑 → 用詞頻乘log機率 → 加prior → 比較最大score。若要posterior才正規化。</p>
+<p>合理性：每類內詞機率加起來為1（Multinomial）；log score通常負，但比較大小要看哪個較大；「$$$ $$$」不能少算一次。</p>
+<h3 id="c3-h6">SVM</h3>
+<p>先把標籤轉±1 → 由直線取w、b → 每點算g(x) → 乘y → 除‖w‖ → 取最小 → 找接觸margin的點 → 清楚註明單側或完整帶寬。</p>
+<p>合理性：全分對則signed margin應皆正；同步放大w、b不應改幾何距離；w法向量不能與直線切向量混淆。</p>
+<h3 id="c3-h7">Neural Network</h3>
+<p>先畫連線／確認權重 → 每單元算z → 套activation得a → 算輸出與loss → 從輸出往回算delta → delta乘來源activation得邊梯度 → 全部算完才更新。</p>
+<p>合理性：sigmoid輸出在0到1；linear輸出可負；梯度符號應與改善預測方向相符；bias梯度不再乘x。</p>
+<h3 id="c3-h8">Confusion Matrix</h3>
+<p>固定「實際／預測」座標軸 → 寫TP、FP、FN、TN → 分別代入 → 最後比較選項。Accuracy、P、R、F1不共用同一分母。</p>
+<h2 id="c3-h9">3. 二十五個容易被改寫的觀念</h2>
+<div class="tablewrap"><table><thead><tr><th>誤句</th><th>正確修正</th></tr></thead><tbody>
+<tr><td>訓練誤差零表示泛化完美</td><td>訓練可以背答案，必須在未見資料評估</td></tr>
+<tr><td>正確分類表示給機率1</td><td>只需正確類別分數最大</td></tr>
+<tr><td>資訊增益每次嚴格正</td><td>可能為0；整體加權熵不增加</td></tr>
+<tr><td>每個子節點一定比父節點純</td><td>個別子熵可能升高</td></tr>
+<tr><td>三屬性一定有唯一最大IG</td><td>可以平手，考古Q1(b)就是反例</td></tr>
+<tr><td>同屬性沿路徑不能再用</td><td>連續特徵可用不同閾值</td></tr>
+<tr><td>NB特徵整體相互獨立</td><td>假設給定類別之後條件獨立</td></tr>
+<tr><td>NB違反獨立就一定分錯</td><td>可能影響校準，排序仍可能正確</td></tr>
+<tr><td>Laplace只把零計數加1</td><td>每個可能值都加α，分母加α乘值數</td></tr>
+<tr><td>Multinomial分母為文件總數</td><td>是類別內總token數</td></tr>
+<tr><td>k-means收斂就全域最佳</td><td>只保證交替更新不增SSE，常是局部解</td></tr>
+<tr><td>k-means++每次選最遠點</td><td>以距離平方加權抽樣</td></tr>
+<tr><td>分群顏色／編號不同就是錯</td><td>群編號可以任意置換</td></tr>
+<tr><td>DBSCAN非core就是noise</td><td>也可能是border</td></tr>
+<tr><td>邊界點可任意繼續擴張DBSCAN</td><td>一般只由core繼續擴張</td></tr>
+<tr><td>PCA最大變異必最會分類</td><td>PCA不看標籤，可能丟失判別資訊</td></tr>
+<tr><td>PCA選原本最重要的欄位</td><td>PCA建立線性組合新軸</td></tr>
+<tr><td>SVM把w放大就margin變大</td><td>同時縮放w、b只改functional margin</td></tr>
+<tr><td>Hard SVM可自動容忍誤分類</td><td>不可分時不可行，要soft margin</td></tr>
+<tr><td>C大正則化更強</td><td>在此soft-margin公式下C大更重視訓練違反懲罰</td></tr>
+<tr><td>Kernel保證所有資料可分</td><td>取決於映射、資料與標籤矛盾</td></tr>
+<tr><td>ReLU處處可微且無梯度消失</td><td>0不可微、負側0；正側有助緩解</td></tr>
+<tr><td>Backprop就是把權重更新</td><td>Backprop算梯度，optimizer更新</td></tr>
+<tr><td>Early stopping應看test loss</td><td>看validation，test留最後評估</td></tr>
+<tr><td>Dropout測試也照常隨機關閉</td><td>標準推論關閉隨機dropout，使用一致縮放</td></tr>
+</tbody></table></div>
+<h2 id="c3-h10">4. 三種「正則化強弱」別背反</h2>
+<ul>
+<li>決策樹：最大深度越小、最小葉樣本越大，限制通常越強。</li>
+<li>L2：在 loss+λ‖w‖²/2 的定義下，λ越大懲罰越強。</li>
+<li>SVM：在 ‖w‖²/2+CΣξ 下，C越小相對越重視權重正則化。</li>
+</ul>
+<p>k-NN 增加k通常使邊界更平滑，但k不是與λ或C完全相同的機制。</p>
+<h2 id="c3-h11">5. 申論答題句型</h2>
+<p><strong>解釋方法</strong>：「此方法以＿＿為目標，透過＿＿達成；當資料＿＿時，可能因＿＿失敗。」</p>
+<p><strong>解釋過擬合</strong>：「模型在訓練資料誤差低，但驗證／測試誤差較高，表示學到部分訓練特有的噪聲；可用＿＿限制複雜度，並用驗證集決定程度。」</p>
+<p><strong>解釋kernel</strong>：「SVM只需特徵向量內積。以K(x,z)=φ(x)ᵀφ(z)替換內積，就能在豐富特徵空間中學習，不必明列所有φ(x)座標。」</p>
+<p><strong>解釋條件獨立</strong>：「給定類別後假設特徵獨立；若相關特徵重複提供相同證據，機率可能過度自信，但不一定每次改變類別排序。」</p>
+<h2 id="c3-h12">6. 中英對照</h2>
+<div class="tablewrap"><table><thead><tr><th>英文</th><th>中文</th></tr></thead><tbody>
+<tr><td>Hypothesis / Generalization</td><td>假設／泛化</td></tr>
+<tr><td>Feature / Label / Instance</td><td>特徵／標籤／樣本</td></tr>
+<tr><td>Entropy / Information gain</td><td>熵／資訊增益</td></tr>
+<tr><td>Impurity / Pruning</td><td>不純度／剪枝</td></tr>
+<tr><td>Prior / Likelihood / Posterior</td><td>先驗／似然／後驗</td></tr>
+<tr><td>Conditional independence</td><td>條件獨立</td></tr>
+<tr><td>Laplace smoothing</td><td>拉普拉斯平滑</td></tr>
+<tr><td>Lazy learner / Eager learner</td><td>惰性學習者／積極學習者</td></tr>
+<tr><td>Centroid / Medoid</td><td>平均中心／代表資料點</td></tr>
+<tr><td>Core / Border / Noise</td><td>核心點／邊界點／噪聲點</td></tr>
+<tr><td>Dendrogram / Linkage</td><td>樹狀圖／群距離連結準則</td></tr>
+<tr><td>Principal component / Eigenvector</td><td>主成分／特徵向量</td></tr>
+<tr><td>Support vector / Margin</td><td>支援向量／間隔</td></tr>
+<tr><td>Slack variable / Kernel trick</td><td>鬆弛變數／核技巧</td></tr>
+<tr><td>Activation / Logit / Bias</td><td>激活值／機率轉換前分數／偏置</td></tr>
+<tr><td>Forward pass / Backpropagation</td><td>前向傳播／反向傳播</td></tr>
+<tr><td>Learning rate / Epoch / Batch</td><td>學習率／一輪完整資料／批次</td></tr>
+<tr><td>Regularization / Weight decay</td><td>正則化／權重衰減</td></tr>
+<tr><td>Precision / Recall / Specificity</td><td>精確率／召回率／特異度</td></tr>
+<tr><td>Bagging / Boosting / Ensemble</td><td>自助聚合／提升法／集成</td></tr>
+<tr><td>Self-supervised / Semi-supervised</td><td>自監督式／半監督式</td></tr>
+<tr><td>Active / Transfer / Online learning</td><td>主動／遷移／線上學習</td></tr>
+</tbody></table></div></section><section id="c4" class="chapter" data-name="模擬試題"><h1 id="c4-h1">自編模擬試題｜100分</h1>
+<details class="chaptertoc"><summary>本篇目錄</summary><ul><li><a href="#c4-h2">A. Decision Tree（16分）</a></li><li><a href="#c4-h3">B. Multinomial Naive Bayes（14分）</a></li><li><a href="#c4-h4">C. Neural Network（20分）</a></li><li><a href="#c4-h5">D. SVM（20分）</a></li><li><a href="#c4-h6">E. Clustering &amp; PCA（15分）</a></li><li><a href="#c4-h7">F. Evaluation &amp; Concepts（15分）</a></li><li><a href="#c4-h8">額外快問｜不計分</a></li></ul></details>
+<p><strong>本卷為依講義與歷屆題型自編，並非歷屆原題。</strong> 建議作答100分鐘；此為練習設定，不代表正式考試時間。可使用計算機，是否正式可用仍依課程規定。先寫公式與過程，再查詳解。</p>
+<div class="tablewrap"><table><thead><tr><th>大題</th><th>配分</th><th>建議時間</th></tr></thead><tbody>
+<tr><td>A 決策樹</td><td>16</td><td>16分鐘</td></tr>
+<tr><td>B Naive Bayes</td><td>14</td><td>14分鐘</td></tr>
+<tr><td>C Neural Network</td><td>20</td><td>20分鐘</td></tr>
+<tr><td>D SVM</td><td>20</td><td>20分鐘</td></tr>
+<tr><td>E 分群與PCA</td><td>15</td><td>15分鐘</td></tr>
+<tr><td>F 評估與觀念</td><td>15</td><td>15分鐘</td></tr>
+</tbody></table></div>
+<h2 id="c4-h2">A. Decision Tree（16分）</h2>
+<p>二元資料共10筆，6正4負。屬性A把資料分為 A=Y：(4正1負)，A=N：(2正3負)；屬性B分為 B=Y：(3正0負)，B=N：(3正4負)。</p>
+<ol>
+<li>計父節點熵與兩個屬性的資訊增益，應選哪個作根？（8分）</li>
+<li>計兩個屬性切割後的加權Gini，選擇是否一致？（4分）</li>
+<li>連續特徵在同一路徑可以重複測試嗎？給例子；再說明一種剪枝策略。（4分）</li>
+</ol>
+<h2 id="c4-h3">B. Multinomial Naive Bayes（14分）</h2>
+<p>詞彙V={free,meeting,project}。Spam的token計數為(8,1,1)，Ham為(1,5,4)。Prior分別為P(S)=0.4、P(H)=0.6，採α=1。</p>
+<ol>
+<li>寫出兩類所有平滑後詞機率。（6分）</li>
+<li>分類文件「free free project」，列兩類的未正規化分數或log score。（5分）</li>
+<li>若free與另一詞在同類內高度相關，NB可能產生什麼問題？零訓練誤差是否等於posterior=1？（3分）</li>
+</ol>
+<h2 id="c4-h4">C. Neural Network（20分）</h2>
+<p>輸入x=(1,2)，兩個sigmoid hidden units：</p>
+<pre><code>hidden1：w=(1,0)，b=−1
+hidden2：w=(0,1)，b=−2
+linear output：v=(2,−1)，b_out=0
+target t=1，L=½(y−t)²</code></pre>
+<ol>
+<li>含bias共有多少參數？（3分）</li>
+<li>算z₁、z₂、a₁、a₂、y、L。（5分）</li>
+<li>算∂L/∂v₁、∂L/∂b_out。（4分）</li>
+<li>算hidden1的兩個輸入權重梯度，以及hidden2的兩個輸入權重梯度。（5分）</li>
+<li>若η=0.1，更新v₁；若某層使用分段常數activation，可能發生什麼問題？（3分）</li>
+</ol>
+<h2 id="c4-h5">D. SVM（20分）</h2>
+<p>負類為(0,0)、(2,0)、(0,2)，正類為(2,2)、(3,2)、(2,3)。考慮分隔線x₁+x₂=3，負類標籤−1、正類+1。</p>
+<ol>
+<li>寫出一組w、b並判斷是否全部分對。（3分）</li>
+<li>計每點functional margin與資料集geometric margin，找最近點。（6分）</li>
+<li>將w、b同乘5，兩種margin如何改變？此線兩側最近支撐平面的完整帶寬多少？（4分）</li>
+<li>新增負類點(2,2)後是否仍能以任何確定性特徵映射完美分類？用何方法處理？（3分）</li>
+<li>展開K(x,z)=(xᵀz+1)²，寫出二維輸入的一組特徵映射。（4分）</li>
+</ol>
+<h2 id="c4-h6">E. Clustering &amp; PCA（15分）</h2>
+<ol>
+<li>k-means：一維點{0,2,3,9,10}，k=2，初始中心0、10。做一次assignment與update，再算更新後SSE。（4分）</li>
+<li>只固定random seed是否能消除局部最佳問題？說一種改善方法。（2分）</li>
+<li>DBSCAN：資料{0,0.1,0.2,0.4,1.2}，ε=0.21、MinPts=3，包含點自己。分別判定core、border、noise。（4分）</li>
+<li>中心化資料的共變異數矩陣S=[[5,0],[0,1]]。第一主成分方向、保留一維的解釋變異比例為何？中心化點(2,3)的投影與重建為何？（5分）</li>
+</ol>
+<h2 id="c4-h7">F. Evaluation &amp; Concepts（15分）</h2>
+<ol>
+<li>TP=45、FP=15、FN=5、TN=35。計accuracy、precision、recall、F1。（6分）</li>
+<li>以下九個敘述各判對錯並給一句理由，每個1分。（9分）</li>
+</ol>
+<pre><code>(a) 全資料一起fit標準化，再cross-validation，不會資料洩漏。
+(b) 降低正類threshold時，TPR與FPR都不會下降。
+(c) Self-supervised的預測目標可以從資料本身產生。
+(d) Active learning完全不需要標註者。
+(e) Multi-task等於同時分類很多類別。
+(f) Dropout訓練隨機遮蔽，標準推論時不再隨機遮蔽。
+(g) k-means++保證全域最佳解。
+(h) 三層線性網路比一層線性網路能表達更多一般非線性函數。
+(i) 五個模型各準確率0.6，即使高度相關，多數決也必為0.68256。</code></pre>
+<h2 id="c4-h8">額外快問｜不計分</h2>
+<ol>
+<li>a(i)=2、b(i)=5時，silhouette多少？b(i)是最近中心距離嗎？</li>
+<li>5個類別使用OvR與OvO分別要幾個分類器？</li>
+<li>103筆資料、batch size=20，保留最後不足batch，每epoch幾次更新？</li>
+<li>L_reg=L_data+0.1w²/2，w=2、資料梯度=0.3、η=0.1，一步SGD後w為何？</li>
+<li>logits=(0,ln3)的softmax是多少？若真類為第一類，對logits梯度為何？</li>
+<li>特徵A分出9筆與1筆，SplitInfo應用(9/10,1/10)還是正負類比例？</li>
+<li>Bagging為何不能只靠複製同一個模型100次來穩定提高準確率？</li>
+<li>Online learning、active learning可同時使用嗎？</li>
+<li>PCA需要y嗎？保留99%變異是否保證分類準確率高？</li>
+<li>ε鄰域內有核心點的非核心點一定是noise嗎？</li>
+</ol></section><section id="c5" class="chapter" data-name="模擬試題詳解"><details class="solution" open><summary>展開／收起：模擬試題詳解（含答案）</summary><h1 id="c5-h1">自編模擬試題｜詳解與訂正</h1>
+<details class="chaptertoc"><summary>本篇目錄</summary><ul><li><a href="#c5-h2">A. Decision Tree（16分）</a></li><li><a href="#c5-h6">B. Multinomial Naive Bayes（14分）</a></li><li><a href="#c5-h10">C. Neural Network（20分）</a></li><li><a href="#c5-h16">D. SVM（20分）</a></li><li><a href="#c5-h22">E. Clustering &amp; PCA（15分）</a></li><li><a href="#c5-h27">F. Evaluation &amp; Concepts（15分）</a></li><li><a href="#c5-h30">額外快問答案</a></li><li><a href="#c5-h31">如何依分數安排訂正</a></li></ul></details>
+<p>對應「04_模擬試題.md」。建議先完成全卷，再對照過程；只答對結論但過程錯誤，仍應重做。</p>
+<h2 id="c5-h2">A. Decision Tree（16分）</h2>
+<h3 id="c5-h3">A1. Entropy與IG（8分）</h3>
+<pre><code>H(parent)=h(0.6)≈0.970951
+A：H_A=0.5h(0.8)+0.5h(0.4)
+       =0.5×0.721928+0.5×0.970951≈0.846439
+IG_A≈0.124511
+B：H_B=0.3h(1)+0.7h(3/7)
+       =0+0.7×0.985228≈0.689660
+IG_B≈0.281291
+選B。</code></pre>
+<p>參考配分：父熵2、A計算2、B計算3、正確選擇1。即使A兩邊人數平均，也不代表更能降低類別不確定性。</p>
+<h3 id="c5-h4">A2. Gini（4分）</h3>
+<pre><code>G_A=0.5[1−0.8²−0.2²]+0.5[1−0.4²−0.6²]
+   =0.5×0.32+0.5×0.48=0.4
+G_B=0.3×0+0.7[1−(3/7)²−(4/7)²]
+   =0.7×24/49=12/35≈0.342857</code></pre>
+<p>加權Gini越小越好，仍選B。父Gini=1−0.6²−0.4²=0.48，下降量A=0.08、B≈0.137143。參考每種切割2分。</p>
+<h3 id="c5-h5">A3. 連續屬性與剪枝（4分）</h3>
+<p>可以重複測連續特徵，如先測age≤60，再在該分支測age≤30，細分不同區間。Pre-pruning可限制最大深度或最小葉樣本；也可答post-pruning以驗證集刪除無益子樹。每部分2分。</p>
+<h2 id="c5-h6">B. Multinomial Naive Bayes（14分）</h2>
+<h3 id="c5-h7">B1. 機率（6分）</h3>
+<p>兩類總token均10，分母10+3=13。</p>
+<div class="tablewrap"><table><thead><tr><th>類別</th><th>free</th><th>meeting</th><th>project</th></tr></thead><tbody>
+<tr><td>Spam</td><td>9/13</td><td>2/13</td><td>2/13</td></tr>
+<tr><td>Ham</td><td>2/13</td><td>6/13</td><td>5/13</td></tr>
+</tbody></table></div>
+<p>每個機率1分。Prior不是由這10個token推得，題目已直接提供。</p>
+<h3 id="c5-h8">B2. 分類（5分）</h3>
+<pre><code>s_S=0.4(9/13)²(2/13)=64.8/2197≈0.0294948
+s_H=0.6(2/13)²(5/13)=12/2197≈0.0054620
+s_S&gt;s_H，預測Spam。</code></pre>
+<p>對數形式：ln0.4+2ln(9/13)+ln(2/13) 與 ln0.6+2ln(2/13)+ln(5/13)。若要posterior，P(S|x)=64.8/(64.8+12)=0.84375。兩分數各2分、分類1分。</p>
+<h3 id="c5-h9">B3. 觀念（3分）</h3>
+<p>相關詞可能導致重複計算證據、posterior過度自信，甚至影響分類。零訓練誤差只需正確類別分數最大，不需機率等於1。</p>
+<h2 id="c5-h10">C. Neural Network（20分）</h2>
+<h3 id="c5-h11">C1. 參數（3分）</h3>
+<p>2→2 hidden：2×2+2=6；2→1 output：2×1+1=3，共 <strong>9</strong>。</p>
+<h3 id="c5-h12">C2. Forward（5分）</h3>
+<pre><code>z₁=1×1+0×2−1=0；z₂=0×1+1×2−2=0
+a₁=a₂=σ(0)=0.5
+y=2×0.5−1×0.5+0=0.5
+L=½(0.5−1)²=0.125</code></pre>
+<p>z與a各2分，y與loss合計1分。</p>
+<h3 id="c5-h13">C3. Output梯度（4分）</h3>
+<pre><code>δ_out=y−t=−0.5
+∂L/∂v₁=δ_out a₁=−0.25
+∂L/∂b_out=δ_out=−0.5</code></pre>
+<p>各2分。v₁本身為2，不是∂y/∂v₁；這個局部導數是來源a₁。</p>
+<h3 id="c5-h14">C4. Hidden梯度（5分）</h3>
+<pre><code>σ&#x27;(0)=0.25
+δ₁=(−0.5)×2×0.25=−0.25
+∂L/∂w₁₁=−0.25×1=−0.25
+∂L/∂w₁₂=−0.25×2=−0.5
+δ₂=(−0.5)×(−1)×0.25=0.125
+∂L/∂w₂₁=0.125×1=0.125
+∂L/∂w₂₂=0.125×2=0.25</code></pre>
+<p>兩個delta合計1分，四條梯度各1分。對hidden1 bias梯度是−0.25，hidden2 bias梯度是0.125（延伸）。</p>
+<h3 id="c5-h15">C5. 更新與activation（3分）</h3>
+<p>v₁,new=2−0.1(−0.25)=<strong>2.025</strong>（1分）。分段常數activation在常數段導數0、跳點不可微，使一般梯度無法有效傳到前層（2分）。</p>
+<h2 id="c5-h16">D. SVM（20分）</h2>
+<h3 id="c5-h17">D1. 分隔線（3分）</h3>
+<p>w=(1,1)、b=−3。負類的和0或2，g為−3或−1；正類的和4或5，g為1或2，全部分對。</p>
+<h3 id="c5-h18">D2. Margin（6分）</h3>
+<p>按題目列點順序：</p>
+<div class="tablewrap"><table><thead><tr><th>點</th><th>y</th><th>g(x)</th><th>y g(x)</th></tr></thead><tbody>
+<tr><td>(0,0)</td><td>−1</td><td>−3</td><td>3</td></tr>
+<tr><td>(2,0)</td><td>−1</td><td>−1</td><td>1</td></tr>
+<tr><td>(0,2)</td><td>−1</td><td>−1</td><td>1</td></tr>
+<tr><td>(2,2)</td><td>+1</td><td>1</td><td>1</td></tr>
+<tr><td>(3,2)</td><td>+1</td><td>2</td><td>2</td></tr>
+<tr><td>(2,3)</td><td>+1</td><td>2</td><td>2</td></tr>
+</tbody></table></div>
+<p>‖w‖=√2，geometric margin=min yg/‖w‖=<strong>1/√2≈0.707107</strong>。最近點為(2,0)、(0,2)、(2,2)。表格3、margin2、最近點1分。</p>
+<h3 id="c5-h19">D3. 縮放與帶寬（4分）</h3>
+<p>同乘5後functional margins乘5，geometric margin不變。原本已規範為最小functional margin=1，兩條支撐平面為x₁+x₂=2、x₁+x₂=4，完整帶寬=2/√2=<strong>√2</strong>。不能直接將縮放後w代入2/‖w‖，因為縮放後支撐平面已對應g&#x27;=±5，而非±1。</p>
+<h3 id="c5-h20">D4. 矛盾樣本（3分）</h3>
+<p>新增負類(2,2)後，同一輸入同時有正、負標籤。任何只取決於x的確定性映射都會把兩筆映到同一位置，所以無法完美分開。可用soft margin容許違反，或檢查標籤／缺失特徵；不能說換RBF必定解決。</p>
+<h3 id="c5-h21">D5. 二次kernel（4分）</h3>
+<pre><code>K=x₁²z₁²+2x₁x₂z₁z₂+x₂²z₂²+2x₁z₁+2x₂z₂+1
+φ(x)=(x₁²,√2x₁x₂,x₂²,√2x₁,√2x₂,1)</code></pre>
+<p>展開2分，正確映射2分。若漏√2，內積係數不符。</p>
+<h2 id="c5-h22">E. Clustering &amp; PCA（15分）</h2>
+<h3 id="c5-h23">E1. k-means（4分）</h3>
+<p>指派：C₁={0,2,3}、C₂={9,10}。更新μ₁=5/3、μ₂=9.5。</p>
+<pre><code>SSE₁=(0−5/3)²+(2−5/3)²+(3−5/3)²
+    =25/9+1/9+16/9=14/3
+SSE₂=(9−9.5)²+(10−9.5)²=0.5
+SSE總=14/3+1/2=31/6≈5.166667</code></pre>
+<p>指派1、中心1、SSE2分。再指派一次仍不變，本例已穩定。</p>
+<h3 id="c5-h24">E2. 初始化（2分）</h3>
+<p>固定seed只保證可重現，不能消除局部解。用k-means++，或多次重啟挑最低SSE。</p>
+<h3 id="c5-h25">E3. DBSCAN（4分）</h3>
+<div class="tablewrap"><table><thead><tr><th>點</th><th>ε鄰域</th><th>類型</th></tr></thead><tbody>
+<tr><td>0</td><td>{0,0.1,0.2}</td><td>Core</td></tr>
+<tr><td>0.1</td><td>{0,0.1,0.2}</td><td>Core</td></tr>
+<tr><td>0.2</td><td>{0,0.1,0.2,0.4}</td><td>Core</td></tr>
+<tr><td>0.4</td><td>{0.2,0.4}</td><td>Border</td></tr>
+<tr><td>1.2</td><td>{1.2}</td><td>Noise</td></tr>
+</tbody></table></div>
+<p>前三點為core共2分，border與noise各1分。</p>
+<h3 id="c5-h26">E4. PCA（5分）</h3>
+<p>λ₁=5、λ₂=1，第一方向v₁=(1,0)ᵀ（反號同樣正確）。保留比例5/(5+1)=<strong>5/6≈83.333%</strong>。對中心化點(2,3)，z=v₁ᵀx=2；中心化重建x̂=v₁z=(2,0)。若方向用(−1,0)，投影為−2、重建仍(2,0)。特徵值與方向2、比例1、投影1、重建1分。</p>
+<h2 id="c5-h27">F. Evaluation &amp; Concepts（15分）</h2>
+<h3 id="c5-h28">F1. 指標（6分）</h3>
+<pre><code>總數=100
+Accuracy=(45+35)/100=0.8
+Precision=45/(45+15)=0.75
+Recall=45/(45+5)=0.9
+F1=90/(90+15+5)=9/11≈0.818182</code></pre>
+<p>Accuracy與Precision各1、Recall與F1各2分。</p>
+<h3 id="c5-h29">F2. 是非（9分）</h3>
+<div class="tablewrap"><table><thead><tr><th>題</th><th>答案</th><th>理由</th></tr></thead><tbody>
+<tr><td>a</td><td>錯</td><td>全資料fit前處理使驗證分布資訊進入訓練</td></tr>
+<tr><td>b</td><td>對</td><td>降閾值擴大預測正集合，TPR與FPR不減</td></tr>
+<tr><td>c</td><td>對</td><td>如遮字預測，目標從原文產生</td></tr>
+<tr><td>d</td><td>錯</td><td>Active learning主動請人／oracle標註</td></tr>
+<tr><td>e</td><td>錯</td><td>多任務是多目標，不是同一任務的多類別</td></tr>
+<tr><td>f</td><td>對</td><td>標準test-time dropout停用隨機遮蔽，使用一致縮放</td></tr>
+<tr><td>g</td><td>錯</td><td>改善初始化，仍不保證全域最優</td></tr>
+<tr><td>h</td><td>錯</td><td>多層仿射仍可合成一層仿射</td></tr>
+<tr><td>i</td><td>錯</td><td>0.68256需要相同0.6且獨立等假設，相關性會改變結果</td></tr>
+</tbody></table></div>
+<h2 id="c5-h30">額外快問答案</h2>
+<ol>
+<li>(5−2)/5=<strong>0.6</strong>。b為到某另一群所有點的平均距離之最小值，不是中心距離。</li>
+<li>OvR=5，OvO=5×4/2=10。</li>
+<li>ceil(103/20)=6。</li>
+<li>正則梯度=λw=0.2，總梯度0.5；w_new=2−0.1×0.5=1.95。</li>
+<li>softmax=(1/4,3/4)；target=(1,0)，梯度p−t=(−3/4,3/4)。</li>
+<li>用分支比例(9/10,1/10)，SplitInfo=h(0.9)≈0.468996。</li>
+<li>相同模型完全相關，重複投票不會提供新的錯誤互補性。</li>
+<li>可以；逐步更新的模型也能主動挑新樣本請人標。</li>
+<li>不需要y；高變異未必有分類資訊，所以不能保證。</li>
+<li>不是；它是border。</li>
+</ol>
+<h2 id="c5-h31">如何依分數安排訂正</h2>
+<ul>
+<li>A或B低於該題70%：回到計數、分母與加權，不要直接背最終小數。</li>
+<li>C低於14分：把網路畫出，每個節點寫z與a，對每條邊寫chain rule。</li>
+<li>D低於14分：重練w,b、類別±1、margin縮放與half/full區別。</li>
+<li>E低於10分：補分群定義與PCA幾何意義，避免只讀考古有出現的部分。</li>
+<li>F錯3題以上：每個錯句改寫成一句真命題，隔天不看答案再判一次。</li>
+</ul>
+<p>分數用來找弱點，不能根據一份自編試卷推估正式成績。</p></details></section><section id="c6" class="chapter" data-name="講義頁碼索引與勘誤"><h1 id="c6-h1">講義頁碼索引、題目歧義與整理範圍</h1>
+<details class="chaptertoc"><summary>本篇目錄</summary><ul><li><a href="#c6-h2">1. 來源清單</a></li><li><a href="#c6-h3">2. 依主題回查講義</a></li><li><a href="#c6-h4">3. 考古題來源與解讀問題</a></li><li><a href="#c6-h12">4. 講義中容易過度簡化的地方</a></li><li><a href="#c6-h13">5. 背景內容與整理取捨</a></li><li><a href="#c6-h14">6. 文字抽取與核對限制</a></li></ul></details>
+<h2 id="c6-h2">1. 來源清單</h2>
+<p>本資料僅依本資料夾提供的文件整理；概念串接、自編例題與推導為教學補充，並非額外查得的教師資料或官方解答。頁碼統一採PDF頁序，以瀏覽器或閱讀器從1開始計數；投影片右下角的頁號可能不同。</p>
+<div class="tablewrap"><table><thead><tr><th>簡稱</th><th>原檔</th><th>頁數</th></tr></thead><tbody>
+<tr><td>L1</td><td>[Lecture 1] Introduction to AI and Machine Learning.pdf</td><td>77</td></tr>
+<tr><td>L2</td><td>[Lecture 2] Unsupervised Learning.pdf</td><td>124</td></tr>
+<tr><td>L3-I</td><td>[Lecture 3] Classical Machine Learning and Generalization (Part 1).pdf</td><td>85</td></tr>
+<tr><td>L3-II</td><td>[Lecture 3] Classical Machine Learning and Generalization (Part 2).pdf</td><td>66</td></tr>
+<tr><td>L4</td><td>[Lecture 4] Neural Network Basics.pdf</td><td>102</td></tr>
+<tr><td>L5</td><td>[Lecture 5] Deep Learning in Practice.pdf</td><td>94</td></tr>
+<tr><td>歷屆</td><td>考古題.pdf（Fall 2025 Midterm Exam）</td><td>4</td></tr>
+</tbody></table></div>
+<p>六份講義共548頁，考古題4頁。課程表雖列Lecture 6與7，但資料夾未提供，不能從2025考卷直接推定2026的完整考試範圍。</p>
+<h2 id="c6-h3">2. 依主題回查講義</h2>
+<div class="tablewrap"><table><thead><tr><th>主題</th><th>PDF頁序</th><th>本資料位置</th></tr></thead><tbody>
+<tr><td>AI/ML/DL、歷史與基本觀念</td><td>L1 p.7–17</td><td>教材第1章</td></tr>
+<tr><td>哲學、論證與追問理由</td><td>L1 p.35–45</td><td>教材1.4</td></tr>
+<tr><td>資料、特徵、型態</td><td>L1 p.47–58</td><td>教材1.2–1.3</td></tr>
+<tr><td>適合ML的問題、形式化與流程</td><td>L1 p.60–77</td><td>教材1.1–1.2</td></tr>
+<tr><td>分類與分群</td><td>L2 p.3–10</td><td>教材1、2</td></tr>
+<tr><td>群距離、中心、半徑、直徑</td><td>L2 p.11–14</td><td>教材2.1、2.5</td></tr>
+<tr><td>k-means與k-medoids/PAM</td><td>L2 p.15–26</td><td>教材2.2–2.4</td></tr>
+<tr><td>階層式分群、dendrogram</td><td>L2 p.27–29</td><td>教材2.5</td></tr>
+<tr><td>DBSCAN核心定義、可達性與演算法</td><td>L2 p.30–47</td><td>教材2.6</td></tr>
+<tr><td>k-means實作概念與初始化</td><td>L2 p.48–58</td><td>教材2.2–2.3</td></tr>
+<tr><td>選k、分群評估、silhouette</td><td>L2 p.59–72</td><td>教材2.7</td></tr>
+<tr><td>離群值、非球狀資料、座標轉換</td><td>L2 p.73–88</td><td>教材2.3、2.6</td></tr>
+<tr><td>高維問題與PCA</td><td>L2 p.98–123</td><td>教材第3章</td></tr>
+<tr><td>分類／數值預測、建模與評估</td><td>L3-I p.7–10</td><td>教材1.2、1.5</td></tr>
+<tr><td>決策樹構造與停止</td><td>L3-I p.12–22</td><td>教材4.1</td></tr>
+<tr><td>熵與資訊增益</td><td>L3-I p.23–31</td><td>教材4.2</td></tr>
+<tr><td>Gain ratio與Gini</td><td>L3-I p.32–37</td><td>教材4.3</td></tr>
+<tr><td>χ²與pre-pruning</td><td>L3-I p.38–44</td><td>教材4.5</td></tr>
+<tr><td>Overfitting與剪枝</td><td>L3-I p.45–47</td><td>教材4.5</td></tr>
+<tr><td>Bayes與NB</td><td>L3-I p.49–59</td><td>教材第5章</td></tr>
+<tr><td>集成動機、bagging、boosting、RF</td><td>L3-I p.61–78</td><td>教材6.2–6.3</td></tr>
+<tr><td>類別不平衡與多類別</td><td>L3-I p.80–82</td><td>教材6.4</td></tr>
+<tr><td>Cross entropy</td><td>L3-I p.83–84；L4 p.96–97</td><td>教材9.3</td></tr>
+<tr><td>k-NN、lazy/eager</td><td>L3-II p.4–6</td><td>教材6.1</td></tr>
+<tr><td>SVM線性判別與margin</td><td>L3-II p.8–23</td><td>教材7.1–7.2</td></tr>
+<tr><td>SVM primal/dual與KKT</td><td>L3-II p.24–36</td><td>教材7.4</td></tr>
+<tr><td>Soft margin</td><td>L3-II p.37–39</td><td>教材7.3</td></tr>
+<tr><td>Kernel、特徵映射與非線性</td><td>L3-II p.40–48</td><td>教材7.4–7.5</td></tr>
+<tr><td>Confusion matrix與分類指標</td><td>L3-II p.51–56</td><td>教材8.1–8.2</td></tr>
+<tr><td>Holdout、CV、資料切分</td><td>L3-II p.57–63</td><td>教材8.3</td></tr>
+<tr><td>ROC</td><td>L3-II p.64–65</td><td>教材8.4</td></tr>
+<tr><td>AI社群、會議、期刊與閱讀</td><td>L4 p.3–14</td><td>此為學習背景，見本篇第5節</td></tr>
+<tr><td>NN動機、單元與activation</td><td>L4 p.15–26</td><td>教材9.1–9.2</td></tr>
+<tr><td>深度、表達力、模組化</td><td>L4 p.27–37</td><td>教材9.7</td></tr>
+<tr><td>NN模型、notation與forward</td><td>L4 p.38–55</td><td>教材9.1、9.4</td></tr>
+<tr><td>Loss與最佳參數</td><td>L4 p.56–59</td><td>教材9.3</td></tr>
+<tr><td>GD、Taylor、局部解與saddle</td><td>L4 p.61–76</td><td>教材9.6–9.7</td></tr>
+<tr><td>Chain rule與backprop</td><td>L4 p.77–94</td><td>教材9.5</td></tr>
+<tr><td>SGD、mini-batch、epoch</td><td>L4 p.95、p.98–101</td><td>教材10.1</td></tr>
+<tr><td>常見輸出與loss、softmax+CE梯度</td><td>L4 p.96–97</td><td>教材9.3</td></tr>
+<tr><td>Adagrad、Adadelta、RMSprop、Adam</td><td>L5 p.4–12</td><td>教材10.2</td></tr>
+<tr><td>LR scheduler與cosine</td><td>L5 p.13–15</td><td>教材10.3</td></tr>
+<tr><td>訓練診斷、baseline、curves</td><td>L5 p.16–20</td><td>教材10.4</td></tr>
+<tr><td>Early stopping</td><td>L5 p.21–22</td><td>教材10.5</td></tr>
+<tr><td>Weight decay</td><td>L5 p.23–28</td><td>教材10.5</td></tr>
+<tr><td>Dropout與ensemble直覺</td><td>L5 p.29–37</td><td>教材10.5</td></tr>
+<tr><td>Augmentation</td><td>L5 p.38–39</td><td>教材10.5</td></tr>
+<tr><td>Supervised、Unsupervised、RL</td><td>L5 p.40–59</td><td>教材第11章</td></tr>
+<tr><td>Semi-supervised與Self-supervised</td><td>L5 p.60–76</td><td>教材11.1</td></tr>
+<tr><td>Multi-instance與weak supervision</td><td>L5 p.77–79</td><td>教材第11章</td></tr>
+<tr><td>Multi-task、Active、Online、Transfer</td><td>L5 p.80–87</td><td>教材11.1</td></tr>
+<tr><td>Ensemble與Multi-source</td><td>L5 p.88–91</td><td>教材第11章</td></tr>
+<tr><td>深度學習挑戰</td><td>L5 p.92</td><td>教材11.2</td></tr>
+</tbody></table></div>
+<h2 id="c6-h4">3. 考古題來源與解讀問題</h2>
+<h3 id="c6-h5">3.1 Q1(a)和Q1(b)計數不同</h3>
+<p>(a)為4T4F；(b)表格是3T5F，需各自計父熵。即使兩小題的某個資訊增益數值巧合相同，也不能沿用資料。</p>
+<h3 id="c6-h6">3.2 Q1(b)三屬性資訊增益平手</h3>
+<p>Fever、Cough、SoreThroat皆IG≈0.048795。題目未指定平手規則，任一個均可作根。前兩層的意思也可指「根與子節點」或「兩輪切割」；詳解提供兩者，並標類別分布。</p>
+<h3 id="c6-h7">3.3 Q2文件數與詞次的混合用語</h3>
+<p>正文可讓人聯想到Bernoulli，但公式表明列Multinomial，且測試文件含重複詞。本資料採token計數主解，分母分別47、54。Bernoulli若使用文件出現計數才會是102，且重複詞只記一次。兩者不能混搭。</p>
+<h3 id="c6-h8">3.4 Q4(c)錯把hard margin描述成可容忍不可分</h3>
+<p>Hard-margin要求yg≥1，不可分時無可行解。能容忍margin violation的是soft-margin。Kernel能增加表示力，但不能保證任意矛盾資料可分。</p>
+<h3 id="c6-h9">3.5 Q6.1(b)「always decreases」過強</h3>
+<p>加權條件熵不增加，資訊增益可為0；個別子節點熵還可能高於父節點。不能把「不增加」當成「每次嚴格降低」。</p>
+<h3 id="c6-h10">3.6 Q6.1(d)同一路徑重複屬性</h3>
+<p>基本離散完整分支ID3中，屬性一旦已固定，再測無資訊；連續值樹可以用不同閾值切同一特徵。本資料列出兩種解讀，沒有官方解答時不宣稱唯一選項。</p>
+<h3 id="c6-h11">3.7 Q6.5(a)early stopping語意</h3>
+<p>課堂意圖是防止繼續過擬合，通常列為正確；嚴格說依validation判斷與patience無法保證從未發生任何過擬合。本資料將考試慣用理解與嚴格描述分開。</p>
+<h2 id="c6-h12">4. 講義中容易過度簡化的地方</h2>
+<ul>
+<li>L2 p.13 的直徑是均方成對距離形式，未必等於2倍半徑，也不是最大點對距離定義。</li>
+<li>L2 p.35出現「more than MinPts」，其他頁寫「at least」。本文採|Nε|≥MinPts、包含自己；作答先聲明約定。</li>
+<li>L2 p.41–44的DBSCAN簡化偽碼容易讓人以為非核心點永久是noise；實際擴張後可以改標border。</li>
+<li>L2 p.62對completeness的中文描述容易被理解成群編號要與類別數字相同。正確定義是同一真實類別集中於同一群，對群編號置換不變。</li>
+<li>L3-I p.69的「Minimize the number of Support Vectors」是直覺說法。標準SVM的目標是margin／範數與誤差折衷，<strong>不是直接最小化支援向量個數</strong>。</li>
+<li>L3-I p.75的bagging提升準確率敘述不應當作每個資料集的保證；模型相關性與資料特性會影響結果。</li>
+<li>L3-I p.77的0.68256需假設五個模型正確率都0.6，且其判斷獨立；只給平均0.6不足以推得。</li>
+<li>L3-II p.18的margin對泛化直覺不等於hard-margin對離群值穩健；離群值可大幅影響最大margin邊界。</li>
+<li>L3-II p.45顯示的kernel預測簡寫容易漏yᵢ。標準α定義下應為ΣαᵢyᵢK(xᵢ,x)+b；若把y吸收進係數才可省略，但係數定義會改變。</li>
+<li>L4 p.33的universal approximation簡寫不應理解為保證精確表示任意函數；常見結論是在適當條件下任意逼近連續函數。</li>
+<li>L5 p.32–33用傳統dropout「測試縮放」說明；常見inverted dropout把縮放放在訓練。要選一套一致操作，不能兩次都縮。</li>
+<li>L5 p.13展示重啟式cosine曲線；單一cosine衰減與warm restarts是不同排程，不能只看名稱推論自動重啟。</li>
+<li>講義中的歷史趨勢、產品、網站、軟體範例與法律引述不當作目前狀態的權威資料。本整理聚焦可由講義建立的穩定考試觀念。</li>
+</ul>
+<h2 id="c6-h13">5. 背景內容與整理取捨</h2>
+<p>L4 p.3–14介紹學術社群：綜合AI會議如NeurIPS、ICML、ICLR、AAAI、IJCAI；電腦視覺如CVPR、ICCV、ECCV；自然語言處理如ACL、EMNLP；期刊如JMLR、TMLR、TPAMI；搜尋與閱讀工具如Google Scholar、arXiv、Semantic Scholar等。這些是課堂的學習資源例子，不代表目前網站功能或排名保證。</p>
+<p>閱讀論文可用三輪：先看問題、貢獻與結果；再看方法與實驗設計；最後重現推導與實驗。考前優先把演算法計算與假設弄清楚，沒有把點名、Slido代碼、休息頁、圖片笑話與網站網址逐一列為背誦項目。</p>
+<h2 id="c6-h14">6. 文字抽取與核對限制</h2>
+<p>原始PDF有大量以圖片嵌入的公式與整頁投影片。已抽取原有文字層，對L4主要教學頁（p.15–102）、L5主要教學頁（p.4–94）與L3-II推導頁（p.18–45）另外輸出影像並目視核對內容。系統OCR嘗試未成功，故<strong>來源文字不是完整逐字稿</strong>：缺圖、公式順序錯亂或「[OCR失敗]」都只代表抽取限制。</p>
+<p>整理後的教材已重寫公式、標明定義與推導；關鍵計算另以程式核對。原PDF仍為查閱圖片、上課標註與完整敘述的依據。無法從這些文件得知教師口頭補充、刪減範圍或評分裁量；因此本資料對歧義保留條件說明。</p></section></main><a class="toplink" href="#top">↑ 頂部</a><script>
+const chapters=[...document.querySelectorAll('.chapter')],buttons=[...document.querySelectorAll('[data-chapter]')];let current='all';
+function selectChapter(id,scroll=true){current=id;chapters.forEach(s=>s.hidden=id!=='all'&&s.id!==id);buttons.forEach(b=>b.classList.toggle('active',b.dataset.chapter===id));if(scroll)window.scrollTo({top:0,behavior:'smooth'});}
+buttons.forEach(b=>b.addEventListener('click',()=>{document.querySelector('#search').value='';clearMarks();document.querySelector('#status').textContent='';selectChapter(b.dataset.chapter);}));
+function clearMarks(){document.querySelectorAll('mark').forEach(m=>{const p=m.parentNode;m.replaceWith(document.createTextNode(m.textContent));p.normalize();});}
+function search(){clearMarks();let q=document.querySelector('#search').value.trim().toLocaleLowerCase();if(!q){selectChapter(current,false);document.querySelector('#status').textContent='';return;}let count=0;chapters.forEach(section=>{let hits=0;const walker=document.createTreeWalker(section,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement.closest('summary,script,style')?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);nodes.forEach(n=>{const original=n.nodeValue,lower=original.toLocaleLowerCase();let start=0,idx=lower.indexOf(q);if(idx<0)return;const frag=document.createDocumentFragment();while(idx>=0){frag.append(document.createTextNode(original.slice(start,idx)));const mark=document.createElement('mark');mark.textContent=original.slice(idx,idx+q.length);frag.append(mark);hits++;start=idx+q.length;idx=lower.indexOf(q,start);}frag.append(document.createTextNode(original.slice(start)));n.replaceWith(frag);});section.hidden=hits===0;if(hits)section.querySelectorAll('details.solution').forEach(d=>d.open=true);count+=hits;});buttons.forEach(b=>b.classList.remove('active'));document.querySelector('#status').textContent=count+' 個符合處';}
+let timer;document.querySelector('#search').addEventListener('input',()=>{clearTimeout(timer);timer=setTimeout(search,150);});
+document.querySelector('#solutions').addEventListener('click',e=>{const all=[...document.querySelectorAll('.solution')],open=all.some(d=>d.open);all.forEach(d=>d.open=!open);e.target.textContent=open?'顯示詳解':'隱藏詳解';});
+document.querySelector('#theme').addEventListener('click',()=>document.body.classList.toggle('dark'));
+document.querySelector('#print').addEventListener('click',()=>{document.querySelectorAll('.solution').forEach(d=>d.open=true);window.print();});
+window.addEventListener('beforeprint',()=>document.querySelectorAll('.solution').forEach(d=>d.open=true));
+document.querySelectorAll('.chaptertoc a').forEach(a=>a.addEventListener('click',()=>{const dest=document.getElementById(a.hash.slice(1));dest.closest('.chapter').hidden=false;}));
+selectChapter('all',false);
+</script></body></html>
